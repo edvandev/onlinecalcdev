@@ -1,0 +1,56 @@
+{
+  "title": {
+    "main": "C'est le geometrengine.",
+    "about": "About website.",
+    "feedback": "Feedback.",
+    "faq": "FAQ."
+  },
+  "undertitle": {
+    "main": "Calculez les formes de manière plus simple.",
+    "about": "",
+    "feedback": "",
+    "faq": ""
+  },
+  "undertitle_short": "",
+  "under_undertitle": {
+    "initext": ["a",
+      "s",
+      "d"]
+  },
+  "modes": {
+    "light_mode": "MODE FONCÉ",
+    "dark_mode": "MODE LUMIÈRE",
+    "message_to_dark": "Voulez-vous vraiment passer en mode sombre?",
+    "message_to_light": "Voulez-vous vraiment passer en mode d'éclairage?"
+  },
+  "links": {
+    "main_page": "Home",
+    "about": "À PROPOS DU SITE",
+    "feedback": "RETOUR D'INFORMATION",
+    "faq": "FAQ"
+  },
+  "main_form": {
+    "calculate": "Calculate",
+    "input_data": "Input data to calculate",
+    "submit_button": "Submit",
+    "clear_button": "Clear"
+  },
+  "feedback_form": {
+    "leave_a_feedback": "Leave a feedback.",
+    "write_message": "Write your message here below.",
+    "title": "Title:",
+    "message": "Message:",
+    "describe": "Shortly describe your message.",
+    "input": "Input your message here.",
+    "check_before_sent": "Check your message before it sent.",
+    "ready_button": "Ready",
+    "edit_button": "Edit",
+    "send_button": "Send",
+    "good_it_sent": "Good, feedback saved to database.",
+    "close": "Close"
+  },
+  "to_mobile": {
+    "button": "VERSION MOBILE",
+    "message": "Voulez-vous vraiment accéder à la version mobile du site Web?"
+  }
+}

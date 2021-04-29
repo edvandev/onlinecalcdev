@@ -1,0 +1,10 @@
+.ftpconfig
+*.pyc
+*.pot
+*.log
+__pycache__/
+calcenv/
+admin/
+settings.py
+local_settings.py
+media

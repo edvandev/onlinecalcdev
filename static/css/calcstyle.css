@@ -1,0 +1,201 @@
+<style type="text/css">
+.form-style-1 {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid var(--borderOfFieldsCalcForm);
+	background-color: var(--backgroundColorOfTextFieldsCalcForm);
+	padding: 7px;
+	padding-right: 100px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px var(--normalShadowOfBorderFields);
+	-webkit-box-shadow: 0 0 8px var(--normalShadowOfBorderFields);
+	box-shadow: 0 0 8px var(--normalShadowOfBorderFields);
+	border: 1px solid var(--normalShadowOfBorderFields);
+}
+.form-style-1 .field-divided{
+	width: 48%;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 8%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+
+
+
+
+/*.............*/
+
+.form-style-1 input[type=submit]:disabled, .form-style-1 input[type=button]:disabled{
+	background: lightgrey;
+	pointer-events: none;
+}
+
+.form-style-1 input[type=reset]:disabled, .form-style-1 input[type=button]:disabled{
+	background: var(--inactiveButtonsCalcForm);
+	pointer-events: none;
+}
+
+/*.............*/
+
+
+
+
+
+/*my new code starts*/
+.form-style-1 input[type=reset], .form-style-1 input[type=button]{
+	background: var(--activeButtonsCalcForm);
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: var(--buttonsTextCalcForm);
+}
+.form-style-1 input[type=reset]:hover, .form-style-1 input[type=button]:hover{
+	background: var(--activeButtonsHoveredCalcForm);
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+/*my new code ends*/
+.form-style-1 .required{
+	color:red;
+}
+
+.button_for_copyText {
+	font-family: 'Kanit', sans-serif;
+	font-size: 13px;
+	width: 94px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-left: -98px;
+}
+.button_for_copyText_ru {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 13px;
+	width: 94px;
+	padding-top: 6px;
+	padding-bottom: 7px;
+	margin-left: -98px;
+}
+
+.copy_button_DarkMode {
+	background-color: #2d2d2d;
+	color: #aaa;
+	border: none;
+	border: 1px solid #3a4648;
+}
+.copy_button_DarkMode:hover {
+	background-color: #567;
+	color: #223;
+	border: none;
+}
+
+
+.field-divided::placeholder {
+	font-size: 14px;
+	font-family: 'Kanit', sans-serif;
+}
+.field-divided_ru::placeholder {
+	font-size: 14px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.fieldsetCalcDarkMode {
+	border-color: #354657;
+}
+
+.warningMessagePlace {
+	font-family: 'Kanit', sans-serif;
+	color: var(--legendOfCalcForm);
+}
+.warningMessagePlace_ru {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.main_form_label_place {
+	font-size: 18px;
+	font-family: 'Kanit', sans-serif;
+	color: var(--labelOfCalcForm);
+}
+.main_form_label_place_ru {
+	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/* #label_of_main_form {
+	font-size: 18px;
+	font-family: 'Kanit', sans-serif;
+} */
+/* .submit_button_of_main_form {
+	font-family: 'Kanit', sans-serif; font-size: 15px; padding: 6px; padding-bottom: 7px; padding-left: 9px; padding-right: 9px; border-radius: 4px;
+}
+.reset_button_of_main_form {
+	font-family: 'Kanit', sans-serif; font-size: 15px; padding: 6px; padding-bottom: 7px; padding-left: 9px; padding-right: 9px; border-radius: 4px;
+} */
+#submitbut {font-family: 'Kanit', sans-serif; font-size: 15px; padding: 6px; padding-bottom: 7px; padding-left: 9px; padding-right: 9px; border-radius: 4px;}
+#resetbut {font-family: 'Kanit', sans-serif; font-size: 15px; padding: 6px; padding-bottom: 7px; padding-left: 9px; padding-right: 9px; border-radius: 4px;}
+
+
+
+</style>

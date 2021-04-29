@@ -1,0 +1,76 @@
+{
+  "title": {
+    "main": "geometrengine.",
+    "main_addition": "This is the ",
+    "about": "About website.",
+    "feedback": "Feedback.",
+    "faq": "FAQ."
+  },
+  "undertitle": {
+    "main": "Calculate shapes by more simple way.",
+    "about": "",
+    "feedback": "",
+    "faq": ""
+  },
+  "undertitle_short": "Calculate shapes by more simple way.",
+  "under_undertitle": {
+    "initext": ["This is geometric calculator allow to calculate any parameter of a shape by any other parameters.",
+      " Just start to input any numbers in any fields, and if you see green light then you can tap the submit button to solve the shape.",
+      " You can calculate here any parameter by any combinations of initial parameters, and that makes this calculator unique."]
+  },
+  "modes": {
+    "light_mode": "DARK MODE",
+    "dark_mode": "LIGHT MODE",
+    "message_to_dark": "Are you sure you want to change to dark mode?",
+    "message_to_light": "Are you sure you want to change to light mode?"
+  },
+  "links": {
+    "main_page": "HOME",
+    "about": "ABOUT WEBSITE",
+    "feedback": "FEEDBACK",
+    "faq": "FAQ"
+  },
+  "warning_message": {
+    "no_message": "Calculate",
+    "no_number": "INAPROPRIATE CHARACTER(OR CHARACTERS) DETECTED. Input numbers only",
+    "negative_number": "NEGATIVE NUMBER(OR NUMBERS) DETECTED. Only input positive ones.",
+    "impossible_shape": "IMPOSSIBLE SHAPE, THE INPUT DATA CONTRADICTS EACH OTHER. Input different data.",
+    "can_partially_solve": "You can partially solve shape.",
+    "can_solve": "You can solve shape."
+  },
+  "main_form": {
+    "calculate": "Calculate",
+    "input_data": "Input data to calculate:",
+    "placeholders": {
+      "side_a": "side a",
+      "side_b": "side b",
+      "side_c": "side c",
+      "angle_A": "angle A",
+      "angle_B": "angle B",
+      "angle_C": "angle C",
+      "perimeter": "perimeter",
+      "area": "area"
+    },
+    "submit_button": "Submit",
+    "clear_button": "Clear",
+    "copy_from_field_button" : "Copy"
+  },
+  "feedback_form": {
+    "leave_a_feedback": "Leave a feedback.",
+    "write_message": "Write your message here below.",
+    "title": "Title:",
+    "message": "Message:",
+    "describe": "Shortly describe your message.",
+    "input": "Input your message here.",
+    "check_before_sent": "Check your message before it sent.",
+    "ready_button": "Ready",
+    "edit_button": "Edit",
+    "send_button": "Send",
+    "good_it_sent": "Good, feedback saved to database.",
+    "close": "Close"
+  },
+  "to_mobile": {
+    "button": "MOBILE VERSION",
+    "message": "Are you sure you want to go to mobile version of the website?"
+  }
+}

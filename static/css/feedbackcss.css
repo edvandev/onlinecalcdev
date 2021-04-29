@@ -1,0 +1,150 @@
+/*Properties of main table in main fieldset.*/
+.main_table_in_main_fieldset {
+  border: 0px solid black;
+  border-collapse: collapse;
+}
+.cell_1_in_main_table_in_main_fieldset {
+  width: 40px;
+  height: 20px;
+}
+.cell_2_in_main_table_in_main_fieldset {
+  width: 640px;
+}
+.cell_3_in_main_table_in_main_fieldset {
+  width: 40px;
+}
+.cell_4_in_main_table_in_main_fieldset {
+  height: 420px;
+}
+.cell_5_in_main_table_in_main_fieldset {
+  padding-left: 24px;
+}
+.cell_6_in_main_table_in_main_fieldset {
+}
+.cell_7_in_main_table_in_main_fieldset {
+  height: 60px;
+}
+.cell_8_in_main_table_in_main_fieldset {
+}
+.cell_9_in_main_table_in_main_fieldset {
+  /**/
+}
+
+
+
+/*Properties of main fieldset.*/
+fieldset {
+  background-color: #F0F5F4;
+}
+.legend_of_main_fieldset {
+  font-size: 20px;
+  font-family: monospace;
+  color: grey;
+}
+
+
+
+/*Text when warns to check.*/
+.message_warns_to_check {
+  margin-top: 32px;
+  color: #3C4349;
+  font-size: 22px;
+  font-family: monospace;
+}
+.title_and_message_check_text {
+  font-size: 21px;
+  font-family: monospace;
+  color: #1994F3;
+  margin-bottom: 1px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.title_and_message_check_text_itself {
+  font-size: 18px;
+  font-family: monospace;
+  color: #256495;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+.area_check_text {
+  width: 430px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.cell_check_text {
+  padding: 0px;
+  margin: 0px;
+  width: 400px;
+  border-collapse: collapse;
+  background-color: #D9ECFA;
+  word-break: break-all;
+}
+
+
+
+/*Properties of response message box*/
+.fieldset_of_response_message {
+  color: #F0F5F4;
+  background-color: #131A1F;
+  border-color: black;
+  border-width: 0px;
+  margin-top: 104px;
+  margin-right: 26px;
+}
+.message_of_response {
+  font-size: 20px;
+  font-family: monospace;
+  color: #6BB8F3;
+}
+
+
+
+/*Title and message fields naming in form.*/
+.form_fields_naming {
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+
+
+/*Text area fields form.*/
+.form_textarea {
+  /**/
+  font-size: 15px;
+}
+
+
+
+/*Buttons.*/
+.edit_button {
+  width: 80px;
+  height: 25px;
+  font-weight: bold;
+  margin-right: 8px;
+  margin-left: 4px;
+}
+.ready_send_button {
+  width: 80px;
+  height: 25px;
+  font-weight: bold;
+}
+.close_button {
+  background-color: #C3DFF6;
+  border: 1px solid #337896;
+  border-radius: 4px;
+}
+
+
+
+.cell_of_table_in_fifth_cell {
+  height: 360px;
+  vertical-align: top;
+}
+
+.message_under_legeng {
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+}

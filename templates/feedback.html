@@ -1,0 +1,100 @@
+<html>
+<head><title>Feedback</title>
+<link rel="stylesheet" type="text/css" href="/static/css/feedbackcss.css">
+<link rel="icon" href="/static/images/favicon.png">
+</head>
+<body>
+<h1 style="font-family:verdana;">Feedback.</h1>
+<h4 style="font-family:arial; color:#60a0bf;">edgarvanbin@gmail.com</h4>
+<a href="{% url 'mainp' %}">home</a>&nbsp;
+<a href="{% url 'about' %}">about</a>&nbsp;
+<a href="{% url 'faq' %}">FAQ</a>
+<br>
+
+
+
+<table align="center"><tr><td>
+
+  <fieldset><legend class="legend_of_main_fieldset">Leave a feedback.</legend>
+
+    <table class="main_table_in_main_fieldset">
+
+      <tr>
+        <td class="cell_1_in_main_table_in_main_fieldset">
+        </td>
+        <td class="cell_2_in_main_table_in_main_fieldset"><a class="message_under_legeng">Write your message here below.</a>
+        </td>
+        <td class="cell_3_in_main_table_in_main_fieldset">
+        </td>
+      </tr>
+
+      <tr>
+        <td class="cell_4_in_main_table_in_main_fieldset">
+        </td>
+        <td class="cell_5_in_main_table_in_main_fieldset">
+          <table align="center"><tr><td class="cell_of_table_in_fifth_cell">
+
+            <p id="warning_check" class="message_warns_to_check"></p>
+
+            <table id="table_of_check_box" class="area_check_text" style="visibility:hidden"><tr><td>
+              <table><tr><td class="cell_check_text">
+                <p id="title_message_point" class="title_and_message_check_text"></p>
+                <p id="show_title_pre_send" class="title_and_message_check_text_itself"></p>
+                <p id="message_message_point" class="title_and_message_check_text"></p>
+                <p id="show_message_pre_send" class="title_and_message_check_text_itself"></p>
+              </td></tr></table>
+            </td></tr></table>
+
+            <form>
+              <p id="ptitle" class="form_fields_naming" style="display:block">Title:</p>
+              <textarea id="field_title" class="form_textarea" style="resize:none; display:block" cols="48" rows="2" placeholder="Shortly describe your message."></textarea>
+              <p id="pmessage" class="form_fields_naming" style="display:block">Message:</p>
+              <textarea id="field_message" class="form_textarea" style="resize:none" cols="48" rows="12" placeholder="Input your message here."></textarea>
+            </form>
+
+            <fieldset id="fieldset_of_response" class="fieldset_of_response_message" style="display:none">
+              <p id="show_response" class="message_of_response" style="display:block"></p>
+              <button id="close" class="close_button" type="button" onclick="close_sent_message()" style="display:none">Close</button>
+            </fieldset>
+
+          </td></tr></table>
+        </td>
+        <td class="cell_6_in_main_table_in_main_fieldset">
+        </td>
+      </tr>
+
+      <tr>
+        <td class="cell_7_in_main_table_in_main_fieldset">
+        </td>
+        <td class="cell_8_in_main_table_in_main_fieldset">
+
+          <table>
+            <tr>
+              <td>
+                <button id="editbutton" class="edit_button" type="button" onclick="edit()" style="display:none"><a id="buttonEdit">Edit</a></button>
+              </td>
+              <td>
+                <button id="multibutton" class="ready_send_button" type="button" onclick="hideform()" style="display:block"><a id="buttonfeedback">Ready</a></button>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+        <td class="cell_9_in_main_table_in_main_fieldset">
+        </td>
+      </tr>
+
+    </table>
+
+  </fieldset>
+
+</td></tr></table>
+
+
+
+</body>
+<script>
+var csrftoken = '{{ csrf_token }}';
+</script>
+<script src="/static/js/feedback.js?aaf"></script>
+</html>
