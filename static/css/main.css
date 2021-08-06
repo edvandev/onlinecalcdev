@@ -25,6 +25,34 @@
   --borderOfFieldsCalcForm: #BEBEBE;
   --normalShadowOfBorderFields: #88D5E9;
   --backgroundColorOfTextFieldsCalcForm: white;
+  --labelFloat1: #444;
+  --labelFloat2: #444;
+  --labelFloat3: #444;
+  --labelFloat4: #444;
+  --labelFloat5: #444;
+  --labelFloat6: #444;
+  --labelFloat7: #444;
+  --copyButtonsText: #28a5a9;
+  --copyButtonsBorder: #88D5E9;
+  --copyButtonsBackground: #cadbdc;
+  --copyButtonsText2: #28a5a9;
+  --copyButtonsBorder2: #88D5E9;
+  --copyButtonsBackground2: #cadbdc;
+  --copyButtonsText3: #28a5a9;
+  --copyButtonsBorder3: #88D5E9;
+  --copyButtonsBackground3: #cadbdc;
+  --copyButtonsText4: #28a5a9;
+  --copyButtonsBorder4: #88D5E9;
+  --copyButtonsBackground4: #cadbdc;
+  --copyButtonsText5: #28a5a9;
+  --copyButtonsBorder5: #88D5E9;
+  --copyButtonsBackground5: #cadbdc;
+  --copyButtonsText6: #28a5a9;
+  --copyButtonsBorder6: #88D5E9;
+  --copyButtonsBackground6: #cadbdc;
+  --copyButtonsText7: #28a5a9;
+  --copyButtonsBorder7: #88D5E9;
+  --copyButtonsBackground7: #cadbdc;
 }
 
 html, body {

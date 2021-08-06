@@ -113,15 +113,20 @@ window.onload=function showByLanguage() {
       sessionStorage.setItem("warningMessageInLegendOfForm_canPartiallySolve", languages.warning_message.can_partially_solve);
       sessionStorage.setItem("warningMessageInLegendOfForm_canSolve", languages.warning_message.can_solve);
 
-      let i = 0;
-      let fieldsLeft = true;
-      while (fieldsLeft == true) {
-        try {
-          document.getElementsByClassName("button_for_copyText")[i].innerHTML = languages.main_form.copy_from_field_button;
-          i++;
-        }
-        catch {fieldsLeft = false}
-      }
+      sessionStorage.setItem("buttonCopyTextTextLong", languages.main_form.copy_from_field_button);
+      sessionStorage.setItem("buttonCopyTextTextShort", languages.main_form.copy_from_field_button_short);
+
+      showTextTitle(executeOnlyFirstFunction = true);
+
+      // let i = 0;
+      // let fieldsLeft = true;
+      // while (fieldsLeft == true) {
+      //   try {
+      //     document.getElementsByClassName("button_for_copyText")[i].innerHTML = languages.main_form.copy_from_field_button;
+      //     i++;
+      //   }
+      //   catch {fieldsLeft = false}
+      // }
 
       bi("submitbut").value = languages.main_form.submit_button;
       bi("resetbut").value = languages.main_form.clear_button;

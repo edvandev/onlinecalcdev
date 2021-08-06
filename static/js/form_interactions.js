@@ -9,7 +9,7 @@ var secondColorForSolvedFields = "rgb(69, 66, 80)";
 
 var text = new Text(colorForSolvedFields, secondColorForSolvedFields);//THIS REFERS TO TEXT INSIDE FORM FIELDS WHERE A SHAPE CALCULATING.
 var field = new Field("red", colorForSolvedFields, secondColorForSolvedFields);//THIS REFERS TO BORDER AND SHADOW OF THE FORM FIELDS. The attribute red used for blinking only.
-
+var labelplaceholderAndCopyButton = new LabelAndCopyButton();
 var warning = new Warning("red", "yellow", "green", "white", "medium");
 
 function checkInp(f_id) {
@@ -107,6 +107,7 @@ function inField(f_id, ranByInp) {
   text.coloring(color);
   var conditionOfDataInput = sessionStorage.getItem("conditionOfinput");
   field.coloring(f_id, reasonOfError, color, conditionOfDataInput);
+  labelplaceholderAndCopyButton.coloring(f_id, color);
   if(sessionStorage.getItem("conditionOfinput") == "solved") {field.coloringBackground(f_id, null, null)};
   if (ranByInp == true) {
     if (document.getElementById(f_id).value.length != 0) {
@@ -122,6 +123,7 @@ function inField(f_id, ranByInp) {
 }
 
 function outField(f_id) {
+  labelplaceholderAndCopyButton.uncoloring(f_id);
   field.coloringBackground(f_id, true, sessionStorage.getItem("conditionOfinput"));
   //bi(f_id).style.boxShadow = "0 0 8px white"; bi(f_id).style.border = "1px solid #BEBEBE";
   bi(f_id).style.boxShadow = null; bi(f_id).style.border = null;

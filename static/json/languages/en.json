@@ -53,7 +53,8 @@
     },
     "submit_button": "Submit",
     "clear_button": "Clear",
-    "copy_from_field_button" : "Copy"
+    "copy_from_field_button" : "Copy",
+    "copy_from_field_button_short" : "&#9112;"
   },
   "feedback_form": {
     "leave_a_feedback": "Leave a feedback.",

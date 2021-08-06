@@ -142,23 +142,25 @@ class Field {
           for (i = 0; i < idsForBlinking.length; i++) {
             if (idsForBlinking[i] != "") {
               listIsNotEmpty = true;
-              bi(idsForBlinking[i]).style.boxShadow = "0 0 8px " + badColor;
+              //bi(idsForBlinking[i]).style.boxShadow = "0 0 8px " + badColor;
               bi(idsForBlinking[i]).style.border = "1px solid " + badColor;
+              bi(idsForBlinking[i]).style.backgroundColor = badColor;
             }
           }
           countBlinks += 1;
-          if (listIsNotEmpty == true) {setTimeout(blinkChangeColor2, 250);}
+          if (listIsNotEmpty == true) {setTimeout(blinkChangeColor2, 100);}
         }
         function blinkChangeColor2() {
           var i;
           for (i = 0; i < idsForBlinking.length; i++) {
             if (idsForBlinking[i] != "") {
-              bi(idsForBlinking[i]).style.boxShadow = null;
+              //bi(idsForBlinking[i]).style.boxShadow = null;
               bi(idsForBlinking[i]).style.border = null;
+              bi(idsForBlinking[i]).style.backgroundColor = null;
             }
           }
-          if (countBlinks < 3) {
-            setTimeout(blinkChangeColor1, 250);
+          if (countBlinks < 4) {
+            setTimeout(blinkChangeColor1, 100);
           } else {
             var dateAndTimeOfEndBlinking = new Date();
             sessionStorage.setItem("timeOfEndOfLastBlinking", dateAndTimeOfEndBlinking);

@@ -116,20 +116,54 @@ select{
 	box-shadow:none;
 	-moz-box-shadow:none;
 	-webkit-box-shadow:none;
+	cursor: pointer;
 }
 /*my new code ends*/
 .form-style-1 .required{
 	color:red;
 }
 
-.button_for_copyText {
+.button_for_copyText#field_s_a_copy_button {
+	border: 1px solid var(--copyButtonsBorder);
+	background-color: var(--copyButtonsBackground); color: var(--copyButtonsText);}
+.button_for_copyText#field_s_b_copy_button {
+	border: 1px solid var(--copyButtonsBorder2);
+	background-color: var(--copyButtonsBackground2); color: var(--copyButtonsText2);}
+.button_for_copyText#field_s_c_copy_button {
+	border: 1px solid var(--copyButtonsBorder3);
+	background-color: var(--copyButtonsBackground3); color: var(--copyButtonsText3);}
+.button_for_copyText#field_a_A_copy_button {
+	border: 1px solid var(--copyButtonsBorder4);
+	background-color: var(--copyButtonsBackground4); color: var(--copyButtonsText4);}
+.button_for_copyText#field_a_B_copy_button {
+	border: 1px solid var(--copyButtonsBorder5);
+	background-color: var(--copyButtonsBackground5); color: var(--copyButtonsText5);}
+.button_for_copyText#field_a_C_copy_button {
+	border: 1px solid var(--copyButtonsBorder6);
+	background-color: var(--copyButtonsBackground6); color: var(--copyButtonsText6);}
+.button_for_copyText#field_peri_copy_button {
+	border: 1px solid var(--copyButtonsBorder7);
+	background-color: var(--copyButtonsBackground7); color: var(--copyButtonsText7);}
+.button_for_copyText#field_s_a_copy_button, .button_for_copyText#field_s_b_copy_button,
+.button_for_copyText#field_s_c_copy_button, .button_for_copyText#field_a_A_copy_button,
+.button_for_copyText#field_a_B_copy_button, .button_for_copyText#field_a_C_copy_button,
+.button_for_copyText#field_peri_copy_button {
 	font-family: 'Kanit', sans-serif;
-	font-size: 13px;
+	font-size: 14px;
+	font-weight: none;
 	width: 94px;
-	padding-top: 4px;
+	padding-top: 3px;
 	padding-bottom: 4px;
-	margin-left: -98px;
+	margin-left: -99px;
+	transform: translateY(-5px);
+	position: absolute;
+	border-radius: 5px;
+	cursor: pointer;
 }
+
+
+
+
 .button_for_copyText_ru {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 13px;
@@ -177,6 +211,7 @@ select{
 	font-size: 18px;
 	font-family: 'Kanit', sans-serif;
 	color: var(--labelOfCalcForm);
+	font-weight: bold;
 }
 .main_form_label_place_ru {
 	font-size: 18px;
@@ -198,4 +233,156 @@ select{
 
 
 
+
+
+
+
+/*New version of form start.........................................*/
+
+.ver_div_form {
+  float: left;
+  width: 42%;
+  padding: 11px;
+  height: 28px; /* Should be removed. Only for demonstration */
+	cursor: context-menu;
+}
+
+.hor_div_form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ver_div_form {
+	/*margin-bottom: 0.2em;*/
+	transition: all .3s;
+}
+.form_lab_new {
+	font-family: 'Kanit', sans-serif;
+	font-size: 23px;
+	cursor: auto;
+	position: absolute;
+	/*background: #fff;*/
+	margin-left: 10px;
+	/*font-size: 1em;*/
+	color: #888;
+	display: block;
+	opacity: 1;
+	transform: translateY(-1.65em);
+	transform-origin: 0 0;
+	transition: all .1s;
+}
+.field-divided {/*form_inp_new changed to field-divided*/
+	/*box-shadow: none;*/
+	background-color: rgba(0,0,0,.0);
+	border-radius: 3px;
+	border: 1px solid #bebebe;
+	/*border-style: none none solid solid;*/
+	width: 94%;
+	transition: all .16s;
+	/*padding: 5px;*/
+	/*padding: 10px 3px 7px -1px;*/
+	padding-top: 14px;
+	padding-right: 1px;
+	padding-bottom: 2px;
+	padding-left: 7px;
+	/*font: 14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
+	font-size: 19px;
+	margin-top: -10px;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* outline: none; */
+	/* font-size: 12px;
+	padding-top: 20px;
+	padding-bottom: 4px; */
+}
+.field-divided::placeholder {/*form_inp_new changed to field-divided*/
+	color: transparent;
+}
+.field-divided:focus {/*form_inp_new changed to field-divided*/
+	border: 1px solid #88d5e9;
+	box-shadow: 0 0 8px #88d5e9;
+	outline: none;
+	/*border-color: blue;*/
+}
+
+#field_s_a:focus + .form_lab_new, #field_s_a:not(:placeholder-shown) + .form_lab_new {/*form_inp_new changed to field-divided*/
+	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);
+	font-weight: normal;
+	color: var(--labelFloat1);
+	/*color: #80cde1;*/
+}
+
+#field_s_b:focus + .form_lab_new, #field_s_b:not(:placeholder-shown) + .form_lab_new {/*form_inp_new changed to field-divided*/
+	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);
+	font-weight: normal;
+	color: var(--labelFloat2);
+	/*color: #80cde1;*/
+}
+#field_s_c:focus + .form_lab_new, #field_s_c:not(:placeholder-shown) + .form_lab_new {/*form_inp_new changed to field-divided*/
+	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);
+	font-weight: normal;
+	color: var(--labelFloat3);
+	/*color: #80cde1;*/
+}
+
+#field_a_A:focus + .form_lab_new, #field_a_A:not(:placeholder-shown) + .form_lab_new {/*form_inp_new changed to field-divided*/
+	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);
+	font-weight: normal;
+	color: var(--labelFloat4);
+	/*color: #80cde1;*/
+}
+#field_a_B:focus + .form_lab_new, #field_a_B:not(:placeholder-shown) + .form_lab_new {/*form_inp_new changed to field-divided*/
+	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);
+	font-weight: normal;
+	color: var(--labelFloat5);
+	/*color: #80cde1;*/
+}
+#field_a_C:focus + .form_lab_new, #field_a_C:not(:placeholder-shown) + .form_lab_new {/*form_inp_new changed to field-divided*/
+	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);
+	font-weight: normal;
+	color: var(--labelFloat6);
+	/*color: #80cde1;*/
+}
+#field_peri:focus + .form_lab_new, #field_peri:not(:placeholder-shown) + .form_lab_new {/*form_inp_new changed to field-divided*/
+	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);
+	font-weight: normal;
+	color: var(--labelFloat7);
+	/*color: #80cde1;*/
+}
+/*.field-divided:focus + .form_lab_new, .field-divided:not(:placeholder-shown) + .form_lab_new {*//*form_inp_new changed to field-divided*/
+/*	transform: translateY(-1.8em) translateX(-0.26em) scale(.6);*/
+/*	font-weight: normal;*/
+/*	color: #80cde1;*/
+/*}*/
+
+
+
+
+
+.ver_div_form:focus-within {
+	transform: scale(1,1);
+}
+
+.ver_div_form input[type=reset], .ver_div_form input[type=button]{
+	background: var(--activeButtonsCalcForm);
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: var(--buttonsTextCalcForm);
+}
+.ver_div_form input[type=reset]:hover, .ver_div_form input[type=button]:hover{
+	background: var(--activeButtonsHoveredCalcForm);
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+
+
+
+
+
+
+/*New version of form end..........................................*/
 </style>

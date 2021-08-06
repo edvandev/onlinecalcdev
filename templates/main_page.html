@@ -13,7 +13,6 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
 </head>
 <body onload="output()" onresize="showTextTitle()">
 
-
   <table class="external_table">
     <tr>
       <td style="vertical-align: top">
@@ -85,122 +84,136 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
               </table>
               <span id="justTest"></span>
 
-            <form name="calculation" id="main_form" action="." method="post">{% csrf_token %}
-            <fieldset id="fieldsetOfCalc"><legend><span id="warningMessage" class="warningMessagePlace"></span></legend>
-            <!--<img src="/static/images/triangle.png" width="100" height="100">-->
-            <ul class="form-style-1">
-
-
-                <li><label id="label_of_main_form" class="main_form_label_place">Input data to calculate <span class="required">*</span></label>
-                <input type="text" name="side_a" id="field_s_a"
-                onfocus="inField('field_s_a'); drawTriangle('side_a');"
-                onfocusout="outField('field_s_a'); drawTriangle('side_a_out');"
-                class="field-divided" placeholder="Side a" autocomplete="off" oninput="checkInp('field_s_a')" />
-
-                <button type="button" id="field_s_a_copy_button" class="button_for_copyText"
-                style="display: none"
-                onclick="copyFromForm('field_s_a_copy_button')"></button>
-
-                <input type="text" name="angle_C" id="field_a_C"
-                onfocus="inField('field_a_C'); drawTriangle('angle_C');"
-                onfocusout="outField('field_a_C'); drawTriangle('angle_C_out');"
-                class="field-divided" placeholder="Angle C" autocomplete="off" oninput="checkInp('field_a_C')" />
-
-                <button type="button" id="field_a_C_copy_button" class="button_for_copyText"
-                style="display: none"
-                onclick="copyFromForm('field_a_C_copy_button')">Copy</button>
-                </li>
-
-
-                <li>
-                <input type="text" name="side_b" id="field_s_b"
-                onfocus="inField('field_s_b'); drawTriangle('side_b');"
-                onfocusout="outField('field_s_b'); drawTriangle('side_b_out');"
-                class="field-divided" placeholder="Side b" autocomplete="off" oninput="checkInp('field_s_b')" />
-
-                <button type="button" id="field_s_b_copy_button" class="button_for_copyText"
-                style="display: none"
-                onclick="copyFromForm('field_s_b_copy_button')">Copy</button>
-
-                <input type="text" name="perimeter" id="field_peri"
-                onfocus="inField('field_peri'); drawTriangle('perimeter');"
-                onfocusout="outField('field_peri'); drawTriangle();"
-                class="field-divided" placeholder="perimeter" autocomplete="off" oninput="checkInp('field_peri')" />
-
-                <button type="button" id="field_peri_copy_button" class="button_for_copyText"
-                style="display: none"
-                onclick="copyFromForm('field_peri_copy_button')">Copy</button>
-                </li>
-
-
-                <li>
-                <input type="text" name="side_c" id="field_s_c"
-                onfocus="inField('field_s_c'); drawTriangle('side_c');"
-                onfocusout="outField('field_s_c'); drawTriangle('side_c_out');"
-                class="field-divided" placeholder="Side c" autocomplete="off" oninput="checkInp('field_s_c')" />
-
-                <button type="button" id="field_s_c_copy_button" class="button_for_copyText"
-                style="display: none"
-                onclick="copyFromForm('field_s_c_copy_button')">Copy</button>
-
-                <input type="text" name="va2" id="field_area"
-                onfocus="drawTriangle('area')"
-                onfocusout="drawTriangle()"
-                class="field-divided" placeholder="Area" autocomplete="off" disabled/>
-                </li>
-
-
-                <li>
-                <input type="text" name="angle_A" id="field_a_A"
-                onfocus="inField('field_a_A'); drawTriangle('angle_A');"
-                onfocusout="outField('field_a_A'); drawTriangle('angle_A_out');"
-                class="field-divided" placeholder="Angle A" autocomplete="off" oninput="checkInp('field_a_A')" />
-
-                <button type="button" id="field_a_A_copy_button" class="button_for_copyText"
-                style="display: none"
-                onclick="copyFromForm('field_a_A_copy_button')">Copy</button>
-
-                <input type="text" name="va2" class="field-divided" placeholder="Height" autocomplete="off" disabled/>
-                </li>
-
-
-                <li>
-                <input type="text" name="angle_B" id="field_a_B"
-                onfocus="inField('field_a_B'); drawTriangle('angle_B');"
-                onfocusout="outField('field_a_B'); drawTriangle('angle_B_out');"
-                class="field-divided" placeholder="Angle B" autocomplete="off" oninput="checkInp('field_a_B')" />
-
-                <button type="button" id="field_a_B_copy_button" class="button_for_copyText"
-                style="display: none"
-                onclick="copyFromForm('field_a_B_copy_button')">Copy</button>
-
-                <input type="text" name="va2" class="field-divided" placeholder="Radius inside circle" autocomplete="off" disabled/>
-                </li>
-
-
-                <li>
-                <input type="hidden" name="excessed_data" id="field_current_excessed_data" autocomplete="off" />
-                </li>
-
-
-                <li style="cursor: default">
-                    <input type="button" id="submitbut" class="submit_button_of_main_form" value="Submit" onclick="addressToserver()" disabled/>
-                    <!-- <input type="reset" id="resetbut" value="Clear" onclick="backcolor()" disabled/> -->
-                    <input type="button" id="resetbut" class="reset_button_of_main_form" value="Clear" onclick="backcolor()" disabled/>
-                </li>
-
-
-            </ul>
-            </fieldset>
-            <!-- <fieldset><legend>Warning message</legend>
-            <font color="red"><p id="warn"></p></font>
-            </fieldset>
-
-            <fieldset><legend>Fore test excessed data message</legend>
-            <font color="red"><p>{{excessed_data_test_message}}</p></font>
-            </fieldset> -->
-
-            </form>
+<fieldset id="fieldsetOfCalc"><legend><span id="warningMessage" class="warningMessagePlace">Calculate</span></legend>
+<label id="label_of_main_form" class="main_form_label_place">Input data to calculate <span class="required">*</span></label>
+<form name="calculation" id="main_form" action="." method="post">{% csrf_token %}
+<div class="hor_div_form">
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new"
+    id="field_s_a" class="field-divided"
+    onfocus="inField('field_s_a'); drawTriangle('side_a');"
+    onfocusout="outField('field_s_a'); drawTriangle('side_a_out');"
+    oninput="checkInp('field_s_a')"
+    placeholder="side a" autocomplete="off">
+    <label for="side_a" class="form_lab_new" onclick="focus_s_a_field()">side a</label>
+    <button type="button" id="field_s_a_copy_button" class="button_for_copyText"
+    style="display: none"
+    onclick="copyFromForm('field_s_a_copy_button')" title="copy"></button>
+  </div>
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new2"
+    id="field_a_C" class="field-divided"
+    onfocus="inField('field_a_C'); drawTriangle('angle_C');"
+    onfocusout="outField('field_a_C'); drawTriangle('angle_C_out');"
+    oninput="checkInp('field_a_C')"
+    placeholder="angle C" autocomplete="off">
+    <label for="name_new2" class="form_lab_new" onclick="focus_a_C_field()">angle C</label>
+    <button type="button" id="field_a_C_copy_button" class="button_for_copyText"
+    style="display: none"
+    onclick="copyFromForm('field_a_C_copy_button')">Copy</button>
+  </div>
+</div>
+<div class="hor_div_form">
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new3"
+    id="field_s_b" class="field-divided"
+    onfocus="inField('field_s_b'); drawTriangle('side_b');"
+    onfocusout="outField('field_s_b'); drawTriangle('side_b_out');"
+    oninput="checkInp('field_s_b')"
+    placeholder="side b" autocomplete="off">
+    <label for="name_new3" class="form_lab_new" onclick="focus_s_b_field()">side b</label>
+    <button type="button" id="field_s_b_copy_button" class="button_for_copyText"
+    style="display: none"
+    onclick="copyFromForm('field_s_b_copy_button')">Copy</button>
+  </div>
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new4"
+    id="field_peri" class="field-divided"
+    onfocus="inField('field_peri'); drawTriangle('perimeter');"
+    onfocusout="outField('field_peri'); drawTriangle();"
+    oninput="checkInp('field_peri')"
+    placeholder="perimeter" autocomplete="off">
+    <label for="name_new4" class="form_lab_new" onclick="focus_peri_field()">perimeter</label>
+    <button type="button" id="field_peri_copy_button" class="button_for_copyText"
+    style="display: none"
+    onclick="copyFromForm('field_peri_copy_button')">Copy</button>
+  </div>
+</div>
+<div class="hor_div_form">
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new5"
+    id="field_s_c" class="field-divided"
+    onfocus="inField('field_s_c'); drawTriangle('side_c');"
+    onfocusout="outField('field_s_c'); drawTriangle('side_c_out');"
+    oninput="checkInp('field_s_c')"
+    placeholder="side c" autocomplete="off">
+    <label for="name_new5" class="form_lab_new" onclick="focus_s_c_field()">side c</label>
+    <button type="button" id="field_s_c_copy_button" class="button_for_copyText"
+    style="display: none"
+    onclick="copyFromForm('field_s_c_copy_button')">Copy</button>
+  </div>
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new6"
+    id="field_area" class="field-divided"
+    onfocus="drawTriangle('area')"
+    onfocusout="drawTriangle()"
+    placeholder="area" autocomplete="off" disabled>
+    <label for="name_new6" class="form_lab_new">area</label>
+  </div>
+</div>
+<div class="hor_div_form">
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new7"
+    id="field_a_A" class="field-divided"
+    onfocus="inField('field_a_A'); drawTriangle('angle_A');"
+    onfocusout="outField('field_a_A'); drawTriangle('angle_A_out');"
+    oninput="checkInp('field_a_A')"
+    placeholder="angle A" autocomplete="off">
+    <label for="name_new7" class="form_lab_new" onclick="focus_a_A_field()">angle A</label>
+    <button type="button" id="field_a_A_copy_button" class="button_for_copyText"
+    style="display: none"
+    onclick="copyFromForm('field_a_A_copy_button')">Copy</button>
+  </div>
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new8"
+    class="field-divided"
+    placeholder="height" autocomplete="off" disabled>
+    <label for="name_new8" class="form_lab_new">height</label>
+  </div>
+</div>
+<div class="hor_div_form">
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new9"
+    id="field_a_B" class="field-divided"
+    onfocus="inField('field_a_B'); drawTriangle('angle_B');"
+    onfocusout="outField('field_a_B'); drawTriangle('angle_B_out');"
+    oninput="checkInp('field_a_B')"
+    placeholder="angle B" autocomplete="off">
+    <label for="name_new9" class="form_lab_new" onclick="focus_a_B_field()">angle B</label>
+    <button type="button" id="field_a_B_copy_button" class="button_for_copyText"
+    style="display: none"
+    onclick="copyFromForm('field_a_B_copy_button')">Copy</button>
+  </div>
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="text" name="name_new10"
+    class="field-divided"
+    placeholder="radius of circle" autocomplete="off" disabled>
+    <label for="name_new10" class="form_lab_new">radius of circle</label>
+  </div>
+</div>
+<div class="hor_div_form">
+  <div class="ver_div_form" style="background-color:#fff;">
+    <div class="form-style-1">
+    <input type="button" id="submitbut" class="submit_button_of_main_form" value="Submit" onclick="addressToserver()" disabled/>
+    <input type="button" id="resetbut" class="reset_button_of_main_form" value="Clear" onclick="backcolor()" disabled/>
+    </div>
+  </div>
+  <div class="ver_div_form" style="background-color:#fff;">
+    <input type="hidden" name="excessed_data" id="field_current_excessed_data" autocomplete="off" />
+  </div>
+</div>
+</form>
+</fieldset>
 
             </td>
           </tr>
@@ -236,24 +249,14 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
       </td>
     </tr>
   </table>
-
-
-
-
-
-
-
-
-
-
-
-
 <script>var csrftoken_calc_request = '{{ csrf_token }}';</script>
 <script src="/static/js/calculation_request.js?{{dt}}"></script>
 <script src="/static/js/color_modes.js?{{dt}}"></script>
 <script src="/static/js/language_supply.js?{{dt}}"></script>
 <script src="/static/js/desktop_mobile.js?{{dt}}"></script>
 <script src="/static/js/functions.js?{{dt}}"></script>
+<script src="/static/js/labels_colors.js?{{dt}}"></script>
+<script src="/static/js/onclick_label.js?{{dt}}"></script>
 <script src="/static/js/warning_functions.js?{{dt}}"></script>
 <script src="/static/js/placeholders_functions.js?{{dt}}"></script>
 <script src="/static/js/form_interactions.js?{{dt}}"></script>

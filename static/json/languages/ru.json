@@ -53,7 +53,8 @@
     },
     "submit_button": "ОК",
     "clear_button": "Очистить",
-    "copy_from_field_button" : "Скопировать"
+    "copy_from_field_button" : "Скопировать",
+    "copy_from_field_button_short" : "&#9112;"
   },
   "feedback_form": {
     "leave_a_feedback": "Оставьте отзыв.",
