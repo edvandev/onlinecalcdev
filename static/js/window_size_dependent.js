@@ -1,23 +1,92 @@
+var bc = function(cl) {return document.getElementsByClassName(cl);};
+
 function showTextTitle(executeOnlyFirstFunction) {
   if (executeOnlyFirstFunction == true) {
-    fontInInputFieldsAndCopyButtons();
+    try {fontInInputFieldsAndCopyButtons();} catch {}
   } else {
-    fontInInputFieldsAndCopyButtons();
+    try {fontInInputFieldsAndCopyButtons();} catch {}
     var text_title = sessionStorage.getItem("text_of_title");
     var text_title_addition = sessionStorage.getItem("text_of_title_addition");
+
+    var text_titlePageAbout = sessionStorage.getItem("text_of_title_ofPageAbout");
+    var text_title_additionPageAbout = sessionStorage.getItem("text_of_title_addition_ofPageAbout");
+
+    var undertitle_text_long_PageAbout = sessionStorage.getItem("undertitleTextLong_ofPageAbout");
+    var undertitle_text_short_PageAbout = sessionStorage.getItem("undertitleTextShort_ofPageAbout");
+
+    var text_titlePageFeedback = sessionStorage.getItem("text_of_title_ofPageFeedback");
+    var text_title_additionPageFeedback = sessionStorage.getItem("text_of_title_addition_ofPageFeedback");
+
+    var undertitle_text_long_PageFeedback = sessionStorage.getItem("undertitleTextLong_ofPageFeedback");
+    var undertitle_text_short_PageFeedback = sessionStorage.getItem("undertitleTextShort_ofPageFeedback");
+
+    var text_titlePageFaq = sessionStorage.getItem("text_of_title_ofPageFaq");
+    var text_title_additionPageFaq = sessionStorage.getItem("text_of_title_addition_ofPageFaq");
+
+    var undertitle_text_long_PageFaq = sessionStorage.getItem("undertitleTextLong_ofPageFaq");
+    var undertitle_text_short_PageFaq = sessionStorage.getItem("undertitleTextShort_ofPageFaq");
+
     var textOfUnderTitle_short = sessionStorage.getItem("undertitleTextShort");
     var textOfUnderTitle_long = sessionStorage.getItem("undertitleTextLong");
     wd = window.innerWidth;
     if (wd < 940) {
       var text_title = text_title
-      bi("titletext").style.textTransform = "capitalize";
-      bi("undertitletext").innerHTML = textOfUnderTitle_short;
+      var text_titlePageAbout = text_titlePageAbout + ".";
+      var text_titlePageFeedback = text_titlePageFeedback + ".";
+      var text_titlePageFaq = text_titlePageFaq;
+      try {bi("titletext").style.textTransform = "capitalize";} catch {}
+      try {bi("undertitletext").innerHTML = textOfUnderTitle_short;}
+      catch {
+        if (document.title == "About") {
+          bi("undertitletext_About_Page").innerHTML = undertitle_text_short_PageAbout;
+        }
+        if (document.title == "Feedback") {
+          bi("undertitletext_Feedback_Page").innerHTML = undertitle_text_short_PageFeedback;
+        }
+        if (document.title == "FAQ") {
+          if (localStorage.getItem("used_language") == "EN") {
+            if (wd < 750) {
+              document.getElementsByClassName("inside_links_right")[0].getElementsByTagName('a')[1].innerHTML = "ABOUT";
+            } else {
+              document.getElementsByClassName("inside_links_right")[0].getElementsByTagName('a')[1].innerHTML = "ABOUT WEBSITE";
+            }
+          }
+          bi("undertitletext_Faq_Page").innerHTML = undertitle_text_short_PageFaq;
+        }
+      }
     } else {
       var text_title = text_title_addition + text_title;
-      bi("titletext").style.textTransform = "none";
-      bi("undertitletext").innerHTML = textOfUnderTitle_long;
+      var text_titlePageAbout = text_titlePageAbout + text_title_additionPageAbout;
+      var text_titlePageFeedback = text_titlePageFeedback + text_title_additionPageFeedback;
+      var text_titlePageFaq = text_title_additionPageFaq;
+      try {bi("titletext").style.textTransform = "none";} catch {}
+      try {bi("undertitletext").innerHTML = textOfUnderTitle_long;}
+      catch {
+        if (document.title == "About") {
+          bi("undertitletext_About_Page").innerHTML = undertitle_text_long_PageAbout;
+        }
+        if (document.title == "Feedback") {
+          bi("undertitletext_Feedback_Page").innerHTML = undertitle_text_long_PageFeedback;
+        }
+        if (document.title == "FAQ") {
+          bi("undertitletext_Faq_Page").innerHTML = undertitle_text_long_PageFaq;
+        }
+      }
     }
-    bi("titletext").innerHTML = text_title;
+    try {
+      bi("titletext").innerHTML = text_title;
+    }
+    catch {
+      if (document.title == "About") {
+        bi("titletext_About_Page").innerHTML = text_titlePageAbout;
+      }
+      if (document.title == "Feedback") {
+        bi("titletext_Feedback_Page").innerHTML = text_titlePageFeedback;
+      }
+      if (document.title == "FAQ") {
+        bi("titletext_Faq_Page").innerHTML = text_titlePageFaq;
+      }
+    }
 
     var combinedButtonThemeAndMobile = document.createElement("BUTTON");
     combinedButtonThemeAndMobile.setAttribute("id", "colorModeMobileVersionSmall");
@@ -31,9 +100,10 @@ function showTextTitle(executeOnlyFirstFunction) {
 
       bi("todarkorlightbutton").hidden = true;
       bi("tomobilebutton").hidden = true;
-      bi("about_website_link").hidden = true;
-      bi("feedback_link").hidden = true;
-      bi("faq_link").hidden = true;
+      try {bi("homepage_link").hidden = true;} catch {}
+      try {bi("about_website_link").hidden = true;} catch {}
+      try {bi("feedback_link").hidden = true;} catch {}
+      try {bi("faq_link").hidden = true;} catch {}
       bi("dividedForLinks1").hidden = true;
       bi("dividedForLinks2").hidden = true;
       var checkForCombinedButton = bi("colorModeMobileVersionSmall");
@@ -62,45 +132,70 @@ function showTextTitle(executeOnlyFirstFunction) {
         minilinks.setAttribute("class", "minilinks_Area");
         bi("linksbox").appendChild(minilinks);
 
-        var p_about_Link = document.createElement("P");
-        p_about_Link.setAttribute("id", "about_Link_p");
-        p_about_Link.setAttribute("class", "AFF_Link_pc");
-        bi("minilinksArea").appendChild(p_about_Link);
+        function makePStuff(link_name) {
+          var link_name_full = link_name + "_Link_p";
+          var p_x_Link = document.createElement("P");
+          p_x_Link.setAttribute("id", link_name_full);
+          p_x_Link.setAttribute("class", "AFF_Link_pc");
+          bi("minilinksArea").appendChild(p_x_Link);
+        }
+        if (document.title == "About") {
+          makePStuff("home");makePStuff("feedback");makePStuff("faq");
+        } else if (document.title == "Feedback") {
+          makePStuff("home");makePStuff("about");makePStuff("faq");
+        } else if (document.title == "FAQ") {
+          makePStuff("home");makePStuff("about");makePStuff("feedback");
+        } else {makePStuff("about");makePStuff("feedback");makePStuff("faq");}
 
-        var p_feedback_Link = document.createElement("P");
-        p_feedback_Link.setAttribute("id", "feedback_Link_p");
-        p_feedback_Link.setAttribute("class", "AFF_Link_pc");
-        bi("minilinksArea").appendChild(p_feedback_Link);
-
-        var p_faq_Link = document.createElement("P");
-        p_faq_Link.setAttribute("id", "faq_Link_p");
-        p_faq_Link.setAttribute("class", "AFF_Link_pc");
-        bi("minilinksArea").appendChild(p_faq_Link);
-
+        // var p_feedback_Link = document.createElement("P");
+        // p_feedback_Link.setAttribute("id", "feedback_Link_p");
+        // p_feedback_Link.setAttribute("class", "AFF_Link_pc");
+        // bi("minilinksArea").appendChild(p_feedback_Link);
         var testvaren = 1;
         var about_Link = document.createElement("A");
         about_Link.setAttribute("href", "/about/");
         about_Link.setAttribute("id", "aboutMiniLink");
         localStorage.getItem("used_language") != "EN" ? about_Link.innerHTML = sessionStorage.getItem("minilinksText_about").toLowerCase() : about_Link.innerHTML = "about";
-        bi("about_Link_p").appendChild(about_Link);
-        bi("aboutMiniLink").style.textTransform = "capitalize";
+
+        if (document.title == "Online Calculator") {
+          bi("about_Link_p").appendChild(about_Link);
+          bi("aboutMiniLink").style.textTransform = "capitalize";
+        }
+
+        var home_Link = document.createElement("A");
+        home_Link.setAttribute("href", "/");
+        home_Link.setAttribute("id", "homeMiniLink");
+        localStorage.getItem("used_language") != "EN" ? home_Link.innerHTML = sessionStorage.getItem("minilinksText_home").toLowerCase() : home_Link.innerHTML = "home";
+
+        if (document.title == "About") {
+          bi("home_Link_p").appendChild(home_Link);
+          bi("homeMiniLink").style.textTransform = "capitalize";
+        }
+
+        if (document.title == "Feedback" || document.title == "FAQ") {
+          bi("home_Link_p").appendChild(home_Link);
+          bi("homeMiniLink").style.textTransform = "capitalize";
+
+          bi("about_Link_p").appendChild(about_Link);
+          bi("aboutMiniLink").style.textTransform = "capitalize";
+        }
 
         var feedback_Link = document.createElement("A");
         feedback_Link.setAttribute("href", "/feedback/");
         feedback_Link.setAttribute("id", "feedbackMiniLink");
         feedback_Link.innerHTML = sessionStorage.getItem("minilinksText_feedback").toLowerCase();
-        bi("feedback_Link_p").appendChild(feedback_Link);
-        bi("feedbackMiniLink").style.textTransform = "capitalize";
+        try {bi("feedback_Link_p").appendChild(feedback_Link);} catch {}
+        try {bi("feedbackMiniLink").style.textTransform = "capitalize";} catch {}
 
         var faq_Link = document.createElement("A");
         faq_Link.setAttribute("href", "/faq/");
         faq_Link.setAttribute("id", "faqMiniLink");
         faq_Link.innerHTML = sessionStorage.getItem("minilinksText_faq").toLowerCase();
-        bi("faq_Link_p").appendChild(faq_Link);
-        bi("faqMiniLink").style.textTransform = "capitalize";
+        try {bi("faq_Link_p").appendChild(faq_Link);} catch {}
+        try {bi("faqMiniLink").style.textTransform = "capitalize";} catch {}
 
         //document.getElementById("initext").style.display = "none";
-        bc("text_underh2")[0].style.fontSize = "12px";
+        try {bc("text_underh2")[0].style.fontSize = "12px";} catch {}
       }
     } else {
       bc("before_right_cells_of_table_in_top_cell_main")[0].style.textAlign = "left";
@@ -109,9 +204,10 @@ function showTextTitle(executeOnlyFirstFunction) {
 
       bi("todarkorlightbutton").hidden = false;
       bi("tomobilebutton").hidden = false;
-      bi("about_website_link").hidden = false;
-      bi("feedback_link").hidden = false;
-      bi("faq_link").hidden = false;
+      try {bi("homepage_link").hidden = false;} catch {}
+      try {bi("about_website_link").hidden = false;} catch {}
+      try {bi("feedback_link").hidden = false;} catch {}
+      try {bi("faq_link").hidden = false;} catch {}
       bi("dividedForLinks1").hidden = false;
       bi("dividedForLinks2").hidden = false;
       var checkForCombinedButton = bi("colorModeMobileVersionSmall");
@@ -119,7 +215,7 @@ function showTextTitle(executeOnlyFirstFunction) {
         checkForCombinedButton.remove();
         divdropct.remove();
         minilinksArea.remove();
-        bc("text_underh2")[0].style.fontSize = "20px";
+        try {bc("text_underh2")[0].style.fontSize = "20px";} catch {}
       }
     }
   }

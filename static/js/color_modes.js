@@ -37,7 +37,8 @@ function showColorMode(mode_light, mode_dark) {
     // toCss.style.setProperty('--leftAndRightBottomTextOfTheWebPage', '#a1c6ff');
     // toCss.style.setProperty('--centerBottomTextOfTheWebPage', '#789ab8');
     localStorage.setItem("colorPageBackgroundDefinitionForWarningMessageAnimation", backgroungOfWebPageAndForWarningPerform);
-    document.getElementById("fieldsetOfCalc").classList.add("fieldsetCalcDarkMode");
+    try {document.getElementById("fieldsetOfCalc").classList.add("fieldsetCalcDarkMode");} catch {}
+    //document.getElementById("fieldsetOfCalc").classList.add("fieldsetCalcDarkMode");
     // toCss.style.setProperty('--legendOfCalcForm', '#7a7a7a');
     // toCss.style.setProperty('--labelOfCalcForm', '#7a7a7a');
     // toCss.style.setProperty('--inactiveButtonsCalcForm', '#111');
@@ -54,13 +55,18 @@ function showColorMode(mode_light, mode_dark) {
     localStorage.setItem("shadowColorOfFieldsWhenRedInputExceptWhereReasonOfRed", backgroungOfWebPageAndForWarningPerform);
     localStorage.setItem("borderColorOfFieldsWhenRedInputExceptWhereReasonOfRed", fieldsBordersColor);
 
-    document.getElementById("field_s_a_copy_button").classList.add("copy_button_DarkMode");
-    document.getElementById("field_s_b_copy_button").classList.add("copy_button_DarkMode");
-    document.getElementById("field_s_c_copy_button").classList.add("copy_button_DarkMode");
-    document.getElementById("field_a_A_copy_button").classList.add("copy_button_DarkMode");
-    document.getElementById("field_a_B_copy_button").classList.add("copy_button_DarkMode");
-    document.getElementById("field_a_C_copy_button").classList.add("copy_button_DarkMode");
-    document.getElementById("field_peri_copy_button").classList.add("copy_button_DarkMode");
+    try {
+      document.getElementById("field_s_a_copy_button").classList.add("copy_button_DarkMode");
+      document.getElementById("field_s_b_copy_button").classList.add("copy_button_DarkMode");
+      document.getElementById("field_s_c_copy_button").classList.add("copy_button_DarkMode");
+      document.getElementById("field_a_A_copy_button").classList.add("copy_button_DarkMode");
+      document.getElementById("field_a_B_copy_button").classList.add("copy_button_DarkMode");
+      document.getElementById("field_a_C_copy_button").classList.add("copy_button_DarkMode");
+      document.getElementById("field_peri_copy_button").classList.add("copy_button_DarkMode");
+    }
+    catch {
+      //...
+    }
   }
 }
 

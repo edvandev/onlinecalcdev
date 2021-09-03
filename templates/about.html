@@ -1,4 +1,172 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About</title>
+<script src="/static/js/dark_mode_preparing.js?{{dt}}"></script>
+<link rel="icon" href="/static/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="/static/css/calcstyle.css?{{dt}}">
+<link rel="stylesheet" type="text/css" href="/static/css/main.css?{{dt}}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<!--Barlow, M+PLUS+Rounded+1c, Jura and Kanit used in Eng.
+Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c used in Rus.-->
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Barlow:wght@100&family=Fira+Sans+Extra+Condensed:wght@300&family=Jura:wght@700&family=Kanit:wght@300&family=M+PLUS+Rounded+1c:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body onload="output()" onresize="showTextTitle()">
+
+  <table class="external_table">
+    <tr>
+      <td style="vertical-align: top">
+        <table class="main_table">
+          <tr>
+            <td class="main_1st_cell">
+              <table class="top_cell_table">
+                <tr>
+                  <td class="left_cell_of_table_in_top_cell_main">
+                    <h1 id="titletext_About_Page"></h1>
+                  </td>
+                  <td class="before_right_cells_of_table_in_top_cell_main">
+                    <div class="language_munu">
+                      <button id="show_used_lang" class="chosen_lang" onclick="dropLangMenu()"></button>
+                      <div id="dropdown_languages_show" class="dropdown_languages">
+                        <a id="en_choice" onclick="set_en_lang()" href="">EN English</a>
+                        <a id="ru_choice" onclick="set_ru_lang()" href="">RU Русский</a>
+                        <a id="fr_choice" onclick="set_fr_lang()" href="">FR Française</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="right_cells_of_table_in_top_cell_main">
+                    <button id="todarkorlightbutton" class="color_mode_button_and_mobile_button" onclick="toDarkOrLight()"></button>
+                  </td>
+                  <td id="cellForCombinedButton" class="right_cells_of_table_in_top_cell_main">
+                    <button id="tomobilebutton" class="color_mode_button_and_mobile_button" onclick="toMobile()"></button>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="main_2nd_cell">
+              <table class="undertitle_and_links">
+                <tr>
+                  <td class="undertitle_cell">
+                    <h2 id="undertitletext_About_Page"></h2>
+                  </td>
+                  <td class="links">
+                    <table class="inside_links">
+                      <tr>
+                        <td class="inside_links_left">&nbsp;&#931;
+                        </td>
+                        <td id="linksbox" class="inside_links_right" style="cursor: default">
+                          <a id="homepage_link" href="{% url 'mainp' %}"></a>
+                          <span id="dividedForLinks1" class="vl">&#0916;</span>
+                          <a id="feedback_link" href="{% url 'feedback' %}"></a>
+                          <span id="dividedForLinks2" class="vl">&#0916;</span>
+                          <a id="faq_link" href="{% url 'faq' %}"></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="main_3rd_cell">
+              <table width="100%">
+                <tr>
+                  <td class="underh2cell">
+                    Here is about this website.
+                    <!-- <span id="initext" class="text_underh2"></span> -->
+                  </td>
+                  <td style="text-align: right"><br>
+                    ...
+                  </td>
+                </tr>
+              </table>
+              <span id="justTest"></span>
+
+.....This is the online calculator for calculate triangles.
+
+            </td>
+          </tr>
+          <!-- <tr>
+            <td id="testColor">
+              <span id="testMessage">4</span>
+            </td>
+          </tr> -->
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="bottom_cell_of_external_table">
+        <table class="table_inside_bottom_cell_of_external_table">
+          <tr>
+            <td>
+              <table class="table_inside_table_inside_bottom_cell_of_external_table">
+                <tr>
+                  <td class="left_bottom_text_cell">
+                    <span class="left_bottom_text">Personal project</span>
+                  </td>
+                  <td class="bottom_text_cell">
+                    <span class="bottom_text">All Rights Reserved. Edgar Vanbin &#169;, 2021</span>
+                  </td>
+                  <td class="right_bottom_text_cell">
+                    <span class="right_bottom_text">Alpha version</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+<script>var csrftoken_calc_request = '{{ csrf_token }}';</script>
+<!-- <script src="/static/js/calculation_request.js?{{dt}}"></script> -->
+<script src="/static/js/color_modes.js?{{dt}}"></script>
+<script src="/static/js/language_supply.js?{{dt}}"></script>
+<script src="/static/js/desktop_mobile.js?{{dt}}"></script>
+<!-- <script src="/static/js/functions.js?{{dt}}"></script> -->
+<!-- <script src="/static/js/labels_colors.js?{{dt}}"></script> -->
+<!-- <script src="/static/js/onclick_label.js?{{dt}}"></script> -->
+<!-- <script src="/static/js/warning_functions.js?{{dt}}"></script> -->
+<!-- <script src="/static/js/placeholders_functions.js?{{dt}}"></script> -->
+<!-- <script src="/static/js/form_interactions.js?{{dt}}"></script> -->
+<!-- <script src="/static/js/draw_tri.js?{{dt}}"></script> -->
+<script src="/static/js/window_size_dependent.js?{{dt}}"></script>
+<!-- <script src="/static/js/copy_text.js?{{dt}}"></script> -->
+<script src="/static/js/ru_font_styles.js?{{dt}}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
 <head><title>About</title>
 <link rel="icon" href="/static/images/favicon.png">
 
@@ -27,4 +195,4 @@ Right now you can calculate the only one shape, but in the nearby future the new
 
 
 </body>
-</html>
+</html> -->

@@ -71,19 +71,52 @@ window.onload=function showByLanguage() {
       text_title_addition = languages.title.main_addition;
       sessionStorage.setItem("text_of_title", text_title);
       sessionStorage.setItem("text_of_title_addition", text_title_addition);
+      text_title_of_aboutPage = languages.title.about;
+      text_title_addition_of_aboutPage = languages.title.about_addition;
+      sessionStorage.setItem("text_of_title_ofPageAbout", text_title_of_aboutPage);
+      sessionStorage.setItem("text_of_title_addition_ofPageAbout", text_title_addition_of_aboutPage);
+
+      text_title_of_feedbackPage = languages.title.feedback;
+      text_title_addition_of_feedbackPage = languages.title.feedback_addition;
+      sessionStorage.setItem("text_of_title_ofPageFeedback", text_title_of_feedbackPage);
+      sessionStorage.setItem("text_of_title_addition_ofPageFeedback", text_title_addition_of_feedbackPage);
+
+
+
+
+      text_title_of_faqPage = languages.title.faq;
+      text_title_addition_of_faqPage = languages.title.faq_addition;
+      sessionStorage.setItem("text_of_title_ofPageFaq", text_title_of_faqPage);
+      sessionStorage.setItem("text_of_title_addition_ofPageFaq", text_title_addition_of_faqPage);
+
+
+
+
+
+
       //showTextTitle();
       //bi("undertitletext").innerHTML = languages.undertitle.main;
       sessionStorage.setItem("undertitleTextLong", languages.undertitle.main);
+      sessionStorage.setItem("undertitleTextLong_ofPageAbout", languages.undertitle.about);
+      sessionStorage.setItem("undertitleTextLong_ofPageFeedback", languages.undertitle.feedback);
+      sessionStorage.setItem("undertitleTextLong_ofPageFaq", languages.undertitle.faq);
       sessionStorage.setItem("undertitleTextShort", languages.undertitle_short);
+      sessionStorage.setItem("undertitleTextShort_ofPageAbout", languages.undertitle_short_ofPage_About);
+      sessionStorage.setItem("undertitleTextShort_ofPageFeedback", languages.undertitle_short_ofPage_Feedback);
+      sessionStorage.setItem("undertitleTextShort_ofPageFaq", languages.undertitle_short_ofPage_FAQ);
       var textpart1 = languages.under_undertitle.initext[0];
       var textpart2 = languages.under_undertitle.initext[1];
       var textpart3 = languages.under_undertitle.initext[2];
-      bi("initext").innerHTML = textpart1+textpart2+textpart3;
-      bi("about_website_link").innerHTML = languages.links.about;
+      try {bi("initext").innerHTML = textpart1+textpart2+textpart3;} catch {}
+      try {bi("homepage_link").innerHTML = languages.links.main_page;} catch {}
+      sessionStorage.setItem("minilinksText_home", languages.links.main_page);
+      try {bi("about_website_link").innerHTML = languages.links.about;} catch {}
       sessionStorage.setItem("minilinksText_about", languages.links.about);
-      bi("feedback_link").innerHTML = languages.links.feedback;
+      try {bi("feedback_link").innerHTML = languages.links.feedback;} catch {}
+      //bi("feedback_link").innerHTML = languages.links.feedback;
       sessionStorage.setItem("minilinksText_feedback", languages.links.feedback);
-      bi("faq_link").innerHTML = languages.links.faq;
+      try {bi("faq_link").innerHTML = languages.links.faq;} catch {}
+      //bi("faq_link").innerHTML = languages.links.faq;
       sessionStorage.setItem("minilinksText_faq", languages.links.faq);
       //showTextTitle();
       var mlight = languages.modes.light_mode;
@@ -92,8 +125,8 @@ window.onload=function showByLanguage() {
       showTextTitle();
 
       //bi("warningMessage").style.fontFamily = "'Kanit', sans-serif";
-      bi("warningMessage").innerHTML = languages.warning_message.no_message;
-      bi("label_of_main_form").innerHTML = languages.main_form.input_data;
+      try {bi("warningMessage").innerHTML = languages.warning_message.no_message;} catch {}
+      try {bi("label_of_main_form").innerHTML = languages.main_form.input_data;} catch {}
 
       sessionStorage.setItem("placeholdersInMainForm_field1", languages.main_form.placeholders.side_a);
       sessionStorage.setItem("placeholdersInMainForm_field2", languages.main_form.placeholders.side_b);
@@ -103,8 +136,8 @@ window.onload=function showByLanguage() {
       sessionStorage.setItem("placeholdersInMainForm_field6", languages.main_form.placeholders.angle_C);
       sessionStorage.setItem("placeholdersInMainForm_field7", languages.main_form.placeholders.perimeter);
       sessionStorage.setItem("placeholdersInMainForm_field8", languages.main_form.placeholders.area);
-      var placeholders = new Placeholders();
-      placeholders.showPlaceholders();
+      try {var placeholders = new Placeholders();} catch {}
+      try {placeholders.showPlaceholders();} catch {}
 
       sessionStorage.setItem("warningMessageInLegendOfForm_noMessage", languages.warning_message.no_message);
       sessionStorage.setItem("warningMessageInLegendOfForm_noNumber", languages.warning_message.no_number);
@@ -128,9 +161,9 @@ window.onload=function showByLanguage() {
       //   catch {fieldsLeft = false}
       // }
 
-      bi("submitbut").value = languages.main_form.submit_button;
-      bi("resetbut").value = languages.main_form.clear_button;
-      resetBlinking();
+      try {bi("submitbut").value = languages.main_form.submit_button;} catch {}
+      try {bi("resetbut").value = languages.main_form.clear_button;} catch {}
+      try {resetBlinking();} catch {}
       sessionStorage.setItem("conditionOfinput", "not_solved");
       var ids_fields = ["field_s_a", "field_s_b", "field_s_c", "field_a_A", "field_a_B", "field_a_C", "field_peri"];//this must be loaded from json.
       sessionStorage.setItem("sequenceOfIdsFields", JSON.stringify(ids_fields));

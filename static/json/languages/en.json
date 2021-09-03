@@ -2,17 +2,23 @@
   "title": {
     "main": "geometrengine.",
     "main_addition": "This is the ",
-    "about": "About website.",
-    "feedback": "Feedback.",
-    "faq": "FAQ."
+    "about": "About",
+    "about_addition": " website.",
+    "feedback": "Feedback",
+    "feedback_addition": " Feedback addition.",
+    "faq": "FAQ.",
+    "faq_addition": "Frequently Asked Questions."
   },
   "undertitle": {
     "main": "Calculate shapes by more simple way.",
-    "about": "",
-    "feedback": "",
-    "faq": ""
+    "about": "About the website.",
+    "feedback": "Leave your thoughts here.",
+    "faq": "Answers for some major questions about this website."
   },
   "undertitle_short": "Calculate shapes by more simple way.",
+  "undertitle_short_ofPage_About": "About this website.",
+  "undertitle_short_ofPage_Feedback": "Leave a feedback.",
+  "undertitle_short_ofPage_FAQ": "Some questions about this website.",
   "under_undertitle": {
     "initext": ["This is geometric calculator allow to calculate any parameter of a shape by any other parameters.",
       " Just start to input any numbers in any fields, and if you see green light then you can tap the submit button to solve the shape.",
