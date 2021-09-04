@@ -119,14 +119,14 @@ fieldset {
 
 /*Buttons.*/
 .edit_button {
-  width: 80px;
+  width: 86px;
   height: 25px;
   font-weight: bold;
   margin-right: 8px;
   margin-left: 4px;
 }
 .ready_send_button {
-  width: 80px;
+  width: 86px;
   height: 25px;
   font-weight: bold;
 }

@@ -77,7 +77,7 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
               <table width="100%">
                 <tr>
                   <td class="underh2cell">
-                    Send you feedback here.
+                    <span id="under_undertitle-feedback" class="text_underh2"></span>
                     <!-- <span id="initext" class="text_underh2"></span> -->
                   </td>
                   <td style="text-align: right"><br>
@@ -90,14 +90,14 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
 .....Type any your thoughts about this online geometry calculator.
 <table align="center"><tr><td>
 
-  <fieldset><legend class="legend_of_main_fieldset">Leave a feedback.</legend>
+  <fieldset><legend class="legend_of_main_fieldset"><span id="leave_a_feedbackForm-legend"></span></legend>
 
     <table class="main_table_in_main_fieldset">
 
       <tr>
         <td class="cell_1_in_main_table_in_main_fieldset">
         </td>
-        <td class="cell_2_in_main_table_in_main_fieldset"><a class="message_under_legeng">Write your message here below.</a>
+        <td class="cell_2_in_main_table_in_main_fieldset"><a class="message_under_legeng"><span id="leave_a_feedbackForm-write_message"></span></a>
         </td>
         <td class="cell_3_in_main_table_in_main_fieldset">
         </td>
@@ -121,15 +121,16 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
             </td></tr></table>
 
             <form>
-              <p id="ptitle" class="form_fields_naming" style="display:block">Title:</p>
+              <p id="ptitle" class="form_fields_naming" style="display:block"><span id="leave_a_feedbackForm-title"></span></p>
               <textarea id="field_title" class="form_textarea" style="resize:none; display:block" cols="38" rows="2" placeholder="Shortly describe your message."></textarea>
-              <p id="pmessage" class="form_fields_naming" style="display:block">Message:</p>
+              <p id="pmessage" class="form_fields_naming" style="display:block"><span id="leave_a_feedbackForm-message"></span></p>
               <textarea id="field_message" class="form_textarea" style="resize:none" cols="38" rows="12" placeholder="Input your message here."></textarea>
             </form>
 
             <fieldset id="fieldset_of_response" class="fieldset_of_response_message" style="display:none">
               <p id="show_response" class="message_of_response" style="display:block"></p>
-              <button id="close" class="close_button" type="button" onclick="close_sent_message()" style="display:none">Close</button>
+              <button id="close" class="close_button" type="button" onclick="close_sent_message()" style="display:none">
+                <span id="leave_a_feedbackForm-close"></span></button>
             </fieldset>
 
           </td></tr></table>
@@ -146,10 +147,12 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
           <table>
             <tr>
               <td>
-                <button id="editbutton" class="edit_button" type="button" onclick="edit()" style="display:none"><a id="buttonEdit">Edit</a></button>
+                <button id="editbutton" class="edit_button" type="button" onclick="edit()" style="display:none">
+                  <a id="buttonEdit"></a><span id="leave_a_feedbackForm-edit_button"></span></button>
               </td>
               <td>
-                <button id="multibutton" class="ready_send_button" type="button" onclick="hideform()" style="display:block"><a id="buttonfeedback">Ready</a></button>
+                <button id="multibutton" class="ready_send_button" type="button" onclick="hideform()" style="display:block">
+                  <a id="buttonfeedback"><span id="leave_a_feedbackForm-ready_button"></span></a></button>
               </td>
             </tr>
           </table>

@@ -10,13 +10,13 @@ class Placeholders {
   returnPlaceholderToInitialPosition() {}
   returnAllPlaceholdersToInitialPosition() {}
   showPlaceholders() {
-    document.getElementById("field_s_a").placeholder = sessionStorage.getItem("placeholdersInMainForm_field1");
-    document.getElementById("field_s_b").placeholder = sessionStorage.getItem("placeholdersInMainForm_field2");
-    document.getElementById("field_s_c").placeholder = sessionStorage.getItem("placeholdersInMainForm_field3");
-    document.getElementById("field_a_A").placeholder = sessionStorage.getItem("placeholdersInMainForm_field4");
-    document.getElementById("field_a_B").placeholder = sessionStorage.getItem("placeholdersInMainForm_field5");
-    document.getElementById("field_a_C").placeholder = sessionStorage.getItem("placeholdersInMainForm_field6");
-    document.getElementById("field_peri").placeholder = sessionStorage.getItem("placeholdersInMainForm_field7");
+    document.getElementById("form_field-s_a").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field1");
+    document.getElementById("form_field-s_b").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field2");
+    document.getElementById("form_field-s_c").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field3");
+    document.getElementById("form_field-a_A").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field4");
+    document.getElementById("form_field-a_B").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field5");
+    document.getElementById("form_field-a_C").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field6");
+    document.getElementById("form_field-peri").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field7");
     document.getElementById("field_area").placeholder = sessionStorage.getItem("placeholdersInMainForm_field8");
   }
 }

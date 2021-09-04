@@ -108,6 +108,13 @@ window.onload=function showByLanguage() {
       var textpart2 = languages.under_undertitle.initext[1];
       var textpart3 = languages.under_undertitle.initext[2];
       try {bi("initext").innerHTML = textpart1+textpart2+textpart3;} catch {}
+
+
+      try {bi("under_undertitle-about").innerHTML = languages.under_undertitle.about;} catch {}
+      try {bi("under_undertitle-feedback").innerHTML = languages.under_undertitle.feedback;} catch {}
+      try {bi("under_undertitle-faq").innerHTML = languages.under_undertitle.faq;} catch {}
+
+
       try {bi("homepage_link").innerHTML = languages.links.main_page;} catch {}
       sessionStorage.setItem("minilinksText_home", languages.links.main_page);
       try {bi("about_website_link").innerHTML = languages.links.about;} catch {}
@@ -171,6 +178,23 @@ window.onload=function showByLanguage() {
       sessionStorage.setItem("blinkingDrawTri", "");
       sessionStorage.setItem("colorConditionOfCalculation", "white");
       //bi("field_s_b_copy_button").style.display = "none";
+
+
+      sessionStorage.setItem("feedback_form-leave_a_feedback", languages.feedback_form.leave_a_feedback);
+      sessionStorage.setItem("feedback_form-write_message", languages.feedback_form.write_message);
+      sessionStorage.setItem("feedback_form-title", languages.feedback_form.title);
+      sessionStorage.setItem("feedback_form-message", languages.feedback_form.message);
+      sessionStorage.setItem("feedback_form-describe", languages.feedback_form.describe);
+      sessionStorage.setItem("feedback_form-input", languages.feedback_form.input);
+      sessionStorage.setItem("feedback_form-check_before_sent", languages.feedback_form.check_before_sent);
+      sessionStorage.setItem("feedback_form-ready_button", languages.feedback_form.ready_button);
+      sessionStorage.setItem("feedback_form-edit_button", languages.feedback_form.edit_button);
+      sessionStorage.setItem("feedback_form-send_button", languages.feedback_form.send_button);
+      sessionStorage.setItem("feedback_form-good_it_sent", languages.feedback_form.good_it_sent);
+      sessionStorage.setItem("feedback_form-close", languages.feedback_form.close);
+
+      try {showTextsDueTheChosenLanguageInFeedbackForm();} catch {}
+
     }
   };
   xmlhttp.open("GET", path_to_json_language, true);
