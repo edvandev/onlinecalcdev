@@ -40,6 +40,7 @@ class Warning {
     conditionCode == 2 ? messageItself = sessionStorage.getItem("warningMessageInLegendOfForm_impossibleShape"):
     conditionCode == 3 ? messageItself = sessionStorage.getItem("warningMessageInLegendOfForm_canPartiallySolve"):
     conditionCode == 4 ? messageItself = sessionStorage.getItem("warningMessageInLegendOfForm_canSolve"):
+    //conditionCode == 5 ? messageItself = sessionStorage.getItem("warningMessageInLegendOfForm_shapeSolved"):
     messageItself = null;
     mainCurrentColor == "red" ? x_color = criticalColor :
     mainCurrentColor == "orange" ? x_color = cautionColor :

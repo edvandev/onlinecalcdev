@@ -4,8 +4,8 @@ var reasonOfError;
 var conditionCode;
 var bi = function(id) {return document.getElementById(id);};
 var bc = function(cl) {return document.getElementsByClassName(cl);};
-var colorForSolvedFields = "rgb(49, 47, 57)";
-var secondColorForSolvedFields = "rgb(69, 66, 80)";
+var colorForSolvedFields = localStorage.getItem("solvedFieldsColorOne");//"rgb(49, 47, 57)";
+var secondColorForSolvedFields = localStorage.getItem("solvedFieldsColorTwo");//"rgb(69, 66, 80)";
 
 var text = new Text(colorForSolvedFields, secondColorForSolvedFields);//THIS REFERS TO TEXT INSIDE FORM FIELDS WHERE A SHAPE CALCULATING.
 var field = new Field("red", colorForSolvedFields, secondColorForSolvedFields);//THIS REFERS TO BORDER AND SHADOW OF THE FORM FIELDS. The attribute red used for blinking only.
@@ -43,10 +43,12 @@ function checkInp(f_id) {
           while (fLeft == true) {
             try {
               var fDis = bc("field-divided")[i];
-              if (fDis.disabled) {
-              } else {
+              if (!fDis.disabled) {
                 var whatValue = bc("field-divided")[i].value;
                 if (whatValue == "") {thereIsEmpty = true;}
+              } else {
+                //var whatValue = bc("field-divided")[i].value;
+                //if (whatValue == "") {thereIsEmpty = true;}
               }
               i++;
             }
@@ -104,7 +106,7 @@ function checkInp(f_id) {
 }
 
 function inField(f_id, ranByInp) {
-  text.coloring(color);
+  text.coloring(color, false, null);
   var conditionOfDataInput = sessionStorage.getItem("conditionOfinput");
   field.coloring(f_id, reasonOfError, color, conditionOfDataInput);
   labelplaceholderAndCopyButton.coloring(f_id, color);

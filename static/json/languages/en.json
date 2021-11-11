@@ -45,7 +45,8 @@
     "negative_number": "NEGATIVE NUMBER(OR NUMBERS) DETECTED. Only input positive ones.",
     "impossible_shape": "IMPOSSIBLE SHAPE, THE INPUT DATA CONTRADICTS EACH OTHER. Input different data.",
     "can_partially_solve": "You can partially solve shape.",
-    "can_solve": "You can solve shape."
+    "can_solve": "You can solve shape.",
+    "shape_solved": "Shape solved."
   },
   "main_form": {
     "calculate": "Calculate",
@@ -58,7 +59,9 @@
       "angle_B": "angle B",
       "angle_C": "angle C",
       "perimeter": "perimeter",
-      "area": "area"
+      "area": "area:",
+      "height": "height:",
+      "radius": "radius of circle:"
     },
     "submit_button": "Submit",
     "clear_button": "Clear",

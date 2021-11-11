@@ -1,8 +1,23 @@
+
+
+function copyButtonsInDarkMode() {
+  let toCss = document.querySelector(':root');
+  const endsOfCssVarNames = ["", "2", "3", "4", "5", "6", "7"];
+  let lh = endsOfCssVarNames.length;
+  for (i=0; i < lh; i++) {
+    toCss.style.setProperty('--copyButtonsText' + endsOfCssVarNames[i], '#687589');
+    toCss.style.setProperty('--copyButtonsBorder' + endsOfCssVarNames[i], '#353535');
+    toCss.style.setProperty('--copyButtonsBackground' + endsOfCssVarNames[i], '#161616');
+  }
+}
+
+
+
 function assignCssVariables() {
   let now_used_mode = localStorage.getItem("used_color_mode");
   if (now_used_mode == "DARK") {
     let toCss = document.querySelector(':root');
-    let backgroungOfWebPageAndForWarningPerform = "#000";
+    let backgroungOfWebPageAndForWarningPerform = "#111113";
     toCss.style.setProperty('--backgroundColorOfTheWebPage', backgroungOfWebPageAndForWarningPerform);
     toCss.style.setProperty('--languageButtonOfTheWebPage', '#397391');
     toCss.style.setProperty('--languageButtonHoverFocusOfTheWebPage', '#2a4d85');
@@ -22,14 +37,62 @@ function assignCssVariables() {
     toCss.style.setProperty('--legendOfCalcForm', '#7a7a7a');
     toCss.style.setProperty('--labelOfCalcForm', '#7a7a7a');
     toCss.style.setProperty('--inactiveButtonsCalcForm', '#111');
-    toCss.style.setProperty('--activeButtonsCalcForm', '#80929f');
-    toCss.style.setProperty('--activeButtonsHoveredCalcForm', '#979aaf');
-    toCss.style.setProperty('--buttonsTextCalcForm', '#252f49');
-    let fieldsBordersColor = "#404143";
+    toCss.style.setProperty('--activeButtonsCalcForm', '#bbb');
+    toCss.style.setProperty('--activeButtonsHoveredCalcForm', '#dcdcdc');
+    toCss.style.setProperty('--buttonsTextCalcForm', '#252f39');
+    let fieldsBordersColor = "#323232";
     toCss.style.setProperty('--borderOfFieldsCalcForm', fieldsBordersColor);
+    localStorage.setItem("borderColorOfInputFields_forDefaultCondition", fieldsBordersColor);
+
+
+
     toCss.style.setProperty('--normalShadowOfBorderFields', '#0a6fc2');
-    let backgroundColorForFieldsOfForm = "#17191a";
+    let backgroundColorForFieldsOfForm = "#111113";
     toCss.style.setProperty('--backgroundColorOfTextFieldsCalcForm', backgroundColorForFieldsOfForm);
+    localStorage.setItem("backgroundColorOfTextFieldsCalcForm_forNonShadow", backgroundColorForFieldsOfForm);
+
+    let placeholdersInFieldsWhenCursorNotInFieldvar = "#313742";
+    toCss.style.setProperty('--placeholdersInFieldsWhenCursorNotInField', placeholdersInFieldsWhenCursorNotInFieldvar);
+
+    toCss.style.setProperty('--linesOfDisabledFields', '#252525');
+
+
+
+
+
+
+
+
+
+
+    let fieldsetBackground_feedbackvar = "#071120";
+    toCss.style.setProperty('--fieldsetBackground-feedback', fieldsetBackground_feedbackvar);
+
+    let legend_feedbackvar = "#0a8fd6";
+    toCss.style.setProperty('--legend-feedback', legend_feedbackvar);
+
+    let beneathTheLegendMessage_feedbackvar = "#0a6fc2";
+    toCss.style.setProperty('--beneathTheLegendMessage-feedback', beneathTheLegendMessage_feedbackvar);
+
+    let inputText_feedback = "#2aaaca";
+    toCss.style.setProperty('--inputText-feedback', inputText_feedback);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 }
 

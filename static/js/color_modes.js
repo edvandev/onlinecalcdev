@@ -13,6 +13,12 @@ function showColorMode(mode_light, mode_dark) {
     localStorage.setItem("backgroundOfTextFieldsForColoringFunctionCalcForm", "#fff");
     localStorage.setItem("shadowColorOfFieldsWhenRedInputExceptWhereReasonOfRed", "#fff");
     localStorage.setItem("borderColorOfFieldsWhenRedInputExceptWhereReasonOfRed", "#bebebe");
+
+    localStorage.setItem("backgroundColorOfTextFieldsCalcForm_forNonShadow", "white");
+    localStorage.setItem("borderColorOfInputFields_forDefaultCondition", "#bebebe");
+
+    localStorage.setItem("solvedFieldsColorOne", "rgb(136, 213, 233)");
+    localStorage.setItem("solvedFieldsColorTwo", "rgb(110, 190, 195)");
   } else {
     document.getElementById("todarkorlightbutton").innerHTML = mode_dark;
     sessionStorage.setItem("textOfColorModeButtonMini", mode_dark);
@@ -48,12 +54,24 @@ function showColorMode(mode_light, mode_dark) {
     let fieldsBordersColor = "#404143";
     // toCss.style.setProperty('--borderOfFieldsCalcForm', fieldsBordersColor);
     // toCss.style.setProperty('--normalShadowOfBorderFields', '#0a6fc2');
-    let backgroundColorForFieldsOfForm = "#17191a";
+    let backgroundColorForFieldsOfForm = "#111113";//"#17191a";
     // toCss.style.setProperty('--backgroundColorOfTextFieldsCalcForm', backgroundColorForFieldsOfForm);
     localStorage.setItem("backgroundOfTextFieldsForColoringFunctionCalcForm", backgroundColorForFieldsOfForm);
     localStorage.setItem("normalTextColorInFormFields", "#169bff");
     localStorage.setItem("shadowColorOfFieldsWhenRedInputExceptWhereReasonOfRed", backgroungOfWebPageAndForWarningPerform);
     localStorage.setItem("borderColorOfFieldsWhenRedInputExceptWhereReasonOfRed", fieldsBordersColor);
+
+    localStorage.setItem("solvedFieldsColorOne", "rgb(4, 50, 230)");
+    localStorage.setItem("solvedFieldsColorTwo", "rgb(6, 60, 238)");
+    try {
+      document.getElementsByClassName("form_textarea")[0].style.borderColor = "#0a6fc2";
+      document.getElementsByClassName("form_textarea")[1].style.borderColor = "#0a6fc2";
+      document.getElementsByTagName("fieldset")[0].style.borderColor = "#0a6fc2";
+      document.getElementsByClassName("form_fields_naming")[0].style.color = "#2aaaca";
+      document.getElementsByClassName("form_fields_naming")[1].style.color = "#2aaaca";
+    }
+    catch {}
+
 
     try {
       document.getElementById("field_s_a_copy_button").classList.add("copy_button_DarkMode");
@@ -76,11 +94,15 @@ function toDarkOrLight() {
   if (to_dark_or_light == "LIGHT") {
     var switch_mode_message = to_dark_message;
     var set_mode = "DARK";
+    localStorage.setItem("solvedFieldsColorOne", "rgb(4, 50, 230)");
+    localStorage.setItem("solvedFieldsColorTwo", "rgb(6, 60, 238)");
   }
 
   if (to_dark_or_light == "DARK") {
     var switch_mode_message = to_light_message;
     var set_mode = "LIGHT";
+    localStorage.setItem("solvedFieldsColorOne", "rgb(136, 213, 233)");
+    localStorage.setItem("solvedFieldsColorTwo", "rgb(110, 190, 195)");
   }
 
   if (to_dark_or_light == null) {var switch_mode_message = to_dark_message; var set_mode = "DARK";}

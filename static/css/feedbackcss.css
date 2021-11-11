@@ -34,14 +34,17 @@
 
 /*Properties of main fieldset.*/
 fieldset {
-  background-color: #F0F5F4;
+  background-color: var(--fieldsetBackground-feedback);/*#F0F5F4;*/
 }
 .legend_of_main_fieldset {
   font-size: 20px;
   font-family: monospace;
-  color: grey;
+  color: var(--legend-feedback);/*grey;*/
 }
 
+#leave_a_feedbackForm-write_message {
+  color: var(--beneathTheLegendMessage-feedback);
+}
 
 
 /*Text when warns to check.*/
@@ -113,6 +116,7 @@ fieldset {
 .form_textarea {
   /**/
   font-size: 15px;
+  color: var(--inputText-feedback);
 }
 
 

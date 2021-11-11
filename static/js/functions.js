@@ -3,7 +3,17 @@ class Text {
     this.solvedColor_1 = solvedColor_1;
     this.solvedColor_2 = solvedColor_2;
   }
-  coloring(currentColor) {
+  coloring(currentColor, runByGettingResult, dataFromServer) {
+    if (runByGettingResult == true) {
+      const fx = [0, 2, 4, 6, 8, 1, 3];
+      let lth = dataFromServer.length;
+      for (i = 7; i < lth; i++) {
+        if (dataFromServer[i] == 0) {
+          bc("field-divided")[fx[i-7]].style.color = localStorage.getItem("normalTextColorInFormFields");
+        }
+      }
+      return;
+    }
     var colorOfSolved_1 = this.solvedColor_1;
     var colorOfSolved_2 = this.solvedColor_2;
     if (currentColor != "red" && currentColor != "green" && currentColor != "orange") {
@@ -16,7 +26,11 @@ class Text {
         var toUseColorText;
         var nowColor = bc("field-divided")[i].style.backgroundColor;
         if (nowColor == colorOfSolved_1 || nowColor == colorOfSolved_2) {toUseColorText = "white";}
-        else {toUseColorText = colorOfTextInForm;}
+        else {
+          if (sessionStorage.getItem("conditionOfinput") == "solved") {toUseColorText = localStorage.getItem("normalTextColorInFormFields")}
+          else {toUseColorText = colorOfTextInForm;}
+          //toUseColorText = colorOfTextInForm;
+        }
         bc("field-divided")[i].style.color = toUseColorText; i++;
       }
       catch {some_fields_left = false;}
@@ -52,7 +66,9 @@ class Field {
     else if (color == "orange") {coloring(sha=color, bor=color);}
     else if (color == "green" && valueOfField != "") {
       if (inputCondition == "solved") {
-        bi(f_id).style.backgroundColor == colorOfSolved ? coloring(sha=colorOfSolved, bor=colorOfSolved) : coloring(sha="white", bor="#BEBEBE");
+        bi(f_id).style.backgroundColor == colorOfSolved ? coloring(sha=colorOfSolved, bor=colorOfSolved) : coloring(
+          sha=localStorage.getItem("backgroundColorOfTextFieldsCalcForm_forNonShadow"),
+          bor=localStorage.getItem("borderColorOfInputFields_forDefaultCondition"));
         //coloring(sha="white", bor="#BEBEBE");
       } else {
         coloring(sha=color, bor=color);
@@ -139,7 +155,8 @@ class Field {
         var listIsNotEmpty = false;
         function blinkChangeColor1() {
           var i;
-          for (i = 0; i < idsForBlinking.length; i++) {
+          var lthis = idsForBlinking.length;
+          for (i = 0; i < lthis; i++) {
             if (idsForBlinking[i] != "") {
               listIsNotEmpty = true;
               //bi(idsForBlinking[i]).style.boxShadow = "0 0 8px " + badColor;
@@ -152,7 +169,8 @@ class Field {
         }
         function blinkChangeColor2() {
           var i;
-          for (i = 0; i < idsForBlinking.length; i++) {
+          var lthis = idsForBlinking.length;
+          for (i = 0; i < lthis; i++) {
             if (idsForBlinking[i] != "") {
               //bi(idsForBlinking[i]).style.boxShadow = null;
               bi(idsForBlinking[i]).style.border = null;

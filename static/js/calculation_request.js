@@ -24,6 +24,14 @@ function addressToserver() {
      bi("submitbut").disabled = true;
      sessionStorage.setItem("conditionOfinput", "solved");
      drawSolved(got_data_fromserver);
+     var text = new Text(null, null);
+     text.coloring(null, true, got_data_fromserver);
+
+     var labelsPlaceholders = new LabelAndCopyButton();
+     labelsPlaceholders.coloringPlaceholdersWhenSolved(got_data_fromserver);
+     //conditionCode = 5;
+     //var warning = new Warning("red", "yellow", "green", "white", "medium");
+     //warning.show(conditionCode, color);
     }
   };
   var id_x_data = JSON.parse(sessionStorage.getItem("sequenceOfIdsFields"));

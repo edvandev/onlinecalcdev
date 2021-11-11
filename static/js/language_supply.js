@@ -61,6 +61,12 @@ window.onload=function showByLanguage() {
       if (localStorage.getItem("used_language") == "RU") {
         ruFonts();
       }
+      //console.log("hihi");
+      if (localStorage.getItem("used_color_mode") == null) {
+        localStorage.setItem("used_color_mode", "LIGHT");
+      }
+      assignCssVarsColors();
+      if (localStorage.getItem("used_color_mode") == "DARK") {copyButtonsInDarkMode();}
       bi("tomobilebutton").innerHTML = languages.to_mobile.button;
       sessionStorage.setItem("TextOfToMobileButtonMini", languages.to_mobile.button);
       to_mob_message = languages.to_mobile.message;
@@ -143,6 +149,13 @@ window.onload=function showByLanguage() {
       sessionStorage.setItem("placeholdersInMainForm_field6", languages.main_form.placeholders.angle_C);
       sessionStorage.setItem("placeholdersInMainForm_field7", languages.main_form.placeholders.perimeter);
       sessionStorage.setItem("placeholdersInMainForm_field8", languages.main_form.placeholders.area);
+
+
+      //.....
+      sessionStorage.setItem("placeholdersInMainForm_field_area", languages.main_form.placeholders.area);
+      sessionStorage.setItem("placeholdersInMainForm_field_height", languages.main_form.placeholders.height);
+      sessionStorage.setItem("placeholdersInMainForm_field_radius", languages.main_form.placeholders.radius);
+      //.....
       try {var placeholders = new Placeholders();} catch {}
       try {placeholders.showPlaceholders();} catch {}
 
@@ -152,6 +165,7 @@ window.onload=function showByLanguage() {
       sessionStorage.setItem("warningMessageInLegendOfForm_impossibleShape", languages.warning_message.impossible_shape);
       sessionStorage.setItem("warningMessageInLegendOfForm_canPartiallySolve", languages.warning_message.can_partially_solve);
       sessionStorage.setItem("warningMessageInLegendOfForm_canSolve", languages.warning_message.can_solve);
+      sessionStorage.setItem("warningMessageInLegendOfForm_shapeSolved", languages.warning_message.shape_solved);
 
       sessionStorage.setItem("buttonCopyTextTextLong", languages.main_form.copy_from_field_button);
       sessionStorage.setItem("buttonCopyTextTextShort", languages.main_form.copy_from_field_button_short);
@@ -195,6 +209,22 @@ window.onload=function showByLanguage() {
 
       try {showTextsDueTheChosenLanguageInFeedbackForm();} catch {}
 
+
+
+
+      //
+//       var checkForFirst = localStorage.getItem("first_visit");
+//       if (checkForFirst == null) {
+//         if (confirm(`Hello, it looks like your first visit to this website, here is two color themes, choose you prefer, for switch to dark mode press OK,
+// for stay in light, press CANCEL. You can also change this in the future. \n\nЗдравствуйте, похоже что это ваш первый визит на этот вебсайт,
+// сайт представлен в двух цветовых решениях, что бы перейти в тёмный режим нажмите ОК, чтобы остаться в светлом нажмите CANCEL,
+// в дальнейшем вы сможете менять режим в любое время.`)) {
+//             toDarkOrLight();
+//         }
+//         localStorage.setItem("first_visit", false);
+//         location.reload();
+//       }
+      //
     }
   };
   xmlhttp.open("GET", path_to_json_language, true);

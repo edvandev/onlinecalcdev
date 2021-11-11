@@ -256,6 +256,7 @@ select{
 .ver_div_form {
 	/*margin-bottom: 0.2em;*/
 	transition: all .3s;
+	background-color: var(--backgroundColorOfTextFieldsCalcForm);
 }
 .form_lab_new {
 	font-family: 'Kanit', sans-serif;
@@ -265,7 +266,7 @@ select{
 	/*background: #fff;*/
 	margin-left: 10px;
 	/*font-size: 1em;*/
-	color: #888;
+	color: var(--placeholdersInFieldsWhenCursorNotInField);
 	display: block;
 	opacity: 1;
 	transform: translateY(-1.65em);
@@ -276,7 +277,7 @@ select{
 	/*box-shadow: none;*/
 	background-color: rgba(0,0,0,.0);
 	border-radius: 3px;
-	border: 1px solid #bebebe;
+	border: 1px solid var(--borderOfFieldsCalcForm);
 	/*border-style: none none solid solid;*/
 	width: 94%;
 	transition: all .16s;
@@ -301,8 +302,8 @@ select{
 	color: transparent;
 }
 .field-divided:focus {/*form_inp_new changed to field-divided*/
-	border: 1px solid #88d5e9;
-	box-shadow: 0 0 8px #88d5e9;
+	border: 1px solid var(--normalShadowOfBorderFields);/*#88d5e9;*/
+	box-shadow: 0 0 8px var(--normalShadowOfBorderFields);/*#88d5e9;*/
 	outline: none;
 	/*border-color: blue;*/
 }
@@ -378,6 +379,15 @@ select{
 	-webkit-box-shadow:none;
 }
 
+
+#field_area.field-divided, #field_height.field-divided, #field_radius.field-divided {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-radius: 0px;
+	border-color: var(--linesOfDisabledFields);
+	/* cursor: not-allowed; */
+}
 
 
 

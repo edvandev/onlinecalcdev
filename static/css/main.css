@@ -53,6 +53,14 @@
   --copyButtonsText7: #28a5a9;
   --copyButtonsBorder7: #88D5E9;
   --copyButtonsBackground7: #cadbdc;
+  --placeholdersInFieldsWhenCursorNotInField: #888;
+  --linesOfDisabledFields: lightgrey;
+
+  /*vars for feedback css.*/
+  --fieldsetBackground-feedback: #F0F5F4;
+  --legend-feedback: grey;
+  --beneathTheLegendMessage-feedback: black;
+  --inputText-feedback: black;
 }
 
 html, body {
@@ -353,7 +361,7 @@ h2 {
   border-radius: 3px;
   /*border-color: #3498DB;
   border-radius: 4px;*/
-  color: #d4edf5;
+  color: #f6fdf6;
 }
 
 .minilinks_Area a {

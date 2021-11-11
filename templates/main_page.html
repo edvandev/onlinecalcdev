@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
 <title>Online Calculator</title>
 <script src="/static/js/dark_mode_preparing.js?{{dt}}"></script>
@@ -88,7 +88,7 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
 <label id="label_of_main_form" class="main_form_label_place">Input data to calculate <span class="required">*</span></label>
 <form name="calculation" id="main_form" action="." method="post">{% csrf_token %}
 <div class="hor_div_form">
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new"
     id="field_s_a" class="field-divided"
     onfocus="inField('field_s_a'); drawTriangle('side_a');"
@@ -100,7 +100,7 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
     style="display: none"
     onclick="copyFromForm('field_s_a_copy_button')" title="copy"></button>
   </div>
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new2"
     id="field_a_C" class="field-divided"
     onfocus="inField('field_a_C'); drawTriangle('angle_C');"
@@ -114,7 +114,7 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
   </div>
 </div>
 <div class="hor_div_form">
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new3"
     id="field_s_b" class="field-divided"
     onfocus="inField('field_s_b'); drawTriangle('side_b');"
@@ -126,7 +126,7 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
     style="display: none"
     onclick="copyFromForm('field_s_b_copy_button')">Copy</button>
   </div>
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new4"
     id="field_peri" class="field-divided"
     onfocus="inField('field_peri'); drawTriangle('perimeter');"
@@ -140,7 +140,7 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
   </div>
 </div>
 <div class="hor_div_form">
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new5"
     id="field_s_c" class="field-divided"
     onfocus="inField('field_s_c'); drawTriangle('side_c');"
@@ -152,17 +152,17 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
     style="display: none"
     onclick="copyFromForm('field_s_c_copy_button')">Copy</button>
   </div>
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new6"
     id="field_area" class="field-divided"
     onfocus="drawTriangle('area')"
     onfocusout="drawTriangle()"
     placeholder="area" autocomplete="off" disabled>
-    <label for="name_new6" class="form_lab_new">area</label>
+    <label for="name_new6" class="form_lab_new"><span id="area_field"></span></label>
   </div>
 </div>
 <div class="hor_div_form">
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new7"
     id="field_a_A" class="field-divided"
     onfocus="inField('field_a_A'); drawTriangle('angle_A');"
@@ -174,15 +174,15 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
     style="display: none"
     onclick="copyFromForm('field_a_A_copy_button')">Copy</button>
   </div>
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new8"
-    class="field-divided"
+    id="field_height" class="field-divided"
     placeholder="height" autocomplete="off" disabled>
-    <label for="name_new8" class="form_lab_new">height</label>
+    <label for="name_new8" class="form_lab_new"><span id="height_field"></span></label>
   </div>
 </div>
 <div class="hor_div_form">
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new9"
     id="field_a_B" class="field-divided"
     onfocus="inField('field_a_B'); drawTriangle('angle_B');"
@@ -194,21 +194,21 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
     style="display: none"
     onclick="copyFromForm('field_a_B_copy_button')">Copy</button>
   </div>
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="text" name="name_new10"
-    class="field-divided"
+    id="field_radius" class="field-divided"
     placeholder="radius of circle" autocomplete="off" disabled>
-    <label for="name_new10" class="form_lab_new">radius of circle</label>
+    <label for="name_new10" class="form_lab_new"><span id="radius_field"></span></label>
   </div>
 </div>
 <div class="hor_div_form">
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <div class="form-style-1">
     <input type="button" id="submitbut" class="submit_button_of_main_form" value="Submit" onclick="addressToserver()" disabled/>
     <input type="button" id="resetbut" class="reset_button_of_main_form" value="Clear" onclick="backcolor()" disabled/>
     </div>
   </div>
-  <div class="ver_div_form" style="background-color:#fff;">
+  <div class="ver_div_form">
     <input type="hidden" name="excessed_data" id="field_current_excessed_data" autocomplete="off" />
   </div>
 </div>
@@ -250,6 +250,8 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
     </tr>
   </table>
 <script>var csrftoken_calc_request = '{{ csrf_token }}';</script>
+<script src="/static/js/color_collection.js?{{dt}}"></script>
+<script src="/static/js/initial_assign_css.js?{{dt}}"></script>
 <script src="/static/js/calculation_request.js?{{dt}}"></script>
 <script src="/static/js/color_modes.js?{{dt}}"></script>
 <script src="/static/js/language_supply.js?{{dt}}"></script>

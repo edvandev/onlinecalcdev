@@ -17,7 +17,10 @@ class Placeholders {
     document.getElementById("form_field-a_B").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field5");
     document.getElementById("form_field-a_C").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field6");
     document.getElementById("form_field-peri").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field7");
-    document.getElementById("field_area").placeholder = sessionStorage.getItem("placeholdersInMainForm_field8");
+    //document.getElementById("field_area").placeholder = sessionStorage.getItem("placeholdersInMainForm_field8");
+    document.getElementById("area_field").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field_area");
+    document.getElementById("height_field").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field_height");
+    document.getElementById("radius_field").innerHTML = sessionStorage.getItem("placeholdersInMainForm_field_radius");
   }
 }
 

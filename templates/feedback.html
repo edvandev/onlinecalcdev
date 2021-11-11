@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
 <title>Feedback</title>
 <script src="/static/js/dark_mode_preparing.js?{{dt}}"></script>
@@ -120,7 +120,7 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
               </td></tr></table>
             </td></tr></table>
 
-            <form>
+            <form class="formForFeedback">
               <p id="ptitle" class="form_fields_naming" style="display:block"><span id="leave_a_feedbackForm-title"></span></p>
               <textarea id="field_title" class="form_textarea" style="resize:none; display:block" cols="38" rows="2" placeholder="Shortly describe your message."></textarea>
               <p id="pmessage" class="form_fields_naming" style="display:block"><span id="leave_a_feedbackForm-message"></span></p>
@@ -203,6 +203,11 @@ Fira+Sans+Extra+Condensed, Alegreya+Sans, Ubuntu, Jura and M+PLUS+Rounded+1c use
   </table>
 <script>var csrftoken_calc_request = '{{ csrf_token }}';</script>
 <!-- <script src="/static/js/calculation_request.js?{{dt}}"></script> -->
+
+<script src="/static/js/color_collection.js?{{dt}}"></script>
+<script src="/static/js/initial_assign_css.js?{{dt}}"></script>
+
+
 <script src="/static/js/color_modes.js?{{dt}}"></script>
 <script src="/static/js/language_supply.js?{{dt}}"></script>
 <script src="/static/js/desktop_mobile.js?{{dt}}"></script>
